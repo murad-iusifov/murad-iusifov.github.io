@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="assets/styles.css" type="text/css">
+    <link rel="stylesheet" href="assets/contact/contact.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    
+    <title>Murad</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="logo">
+            </a>
+            <ul class="topnav" id="myTopnav">
+                <li><a href="index.html" class="roboto">Главная</a></li>
+                <li><a href="products.html" class="roboto">Товары</a></li>
+                <li><a href="gallery.html" class="roboto">Галерея</a></li>
+                <li><a href="contact.html" class="roboto">Связь</a></li>
+                <li><a href="aboutUs.html" class="roboto">О нас</a></li>
+                <a id="menu" href="#" class="icon">&#9776;</a>
+            </ul>
+            <form action="#" class="searchForm">
+                <input class="searchText" class="roboto" placeholder="search">
+                <button class="searchButton"><i class="fas fa-search"></i></button>
+            </form>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="contactUs" id="contact">
+            <h2 class="title">По всем интересующим вопросам Вы можете написать нам:</h2>
+            <form action="assets/mail.php" class="contactForm" id="form">
+                <div class="aboutClient">
+                    <input type="text" name="name" placeholder="Your Name" class="formItem clientName" required>
+                    <input type="text" name="email" placeholder="Your Email" class="formItem clientEmail" required>
+                </div>
+                <input type="text" name="title" placeholder="Your Title" class="formItem">
+                <textarea name="text" wrap placeholder="Your Comment" class="formItem textarea"></textarea>
+                <button class="contactButton">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footerLogo">
+            <img src="img/logo.png" alt="logo">
+        </section>
+        <section class="footerMain">
+                <div class="footerInfo">
+                    <span class="pirollDesign">Murad Iusifov, develop.</span>
+                    <span>@2019 Mirillis.</span>
+                    <span>All rights reserved.</span>
+                    <span>Designed by: I don't know.</span>
+                </div>
+                <address class="address">
+                    <a href="mailto:muradiusifov@gmail.com" class="mailAddress text">muradiusifov@gmail.com</a>
+                    <span class="phoneMe">Телефон:<a href="tel:+44987065908">+7 967 770 25 68</a></span>
+                </address>
+        </section>
+        <section class="socialNetworks">
+            <a href="facebook.com"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="twitter.com"><i class="fab fa-twitter"></i>Twitter</a>
+            <a href="Instagram.com"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="dribble.com"><i class="fab fa-vk"></i>Vk</a>
+        </section>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="assets/contact/contact.js"></script>
+    <script type="text/javascript">
+        var zero = 0;
+        $(document).ready(function(){
+            $(window).on('scroll', function(){
+                $('.nav').toggleClass('hide', $(window).scrollTop()
+                    > zero);
+                zero = $(window).scrollTop();
+            })
+        })
+    </script>
+</body>
+</html>
