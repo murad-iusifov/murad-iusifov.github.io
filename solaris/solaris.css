@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.car{
+    width: 500px;
+    height: 400px;
+    margin: 50px auto auto;
+}
+
+.car_img{
+    width: 100%;
+    height: 100%;
+}
+
+.color_dots{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.color-dot{
+    width: 50px;
+    height: 50px;
+    list-style: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot-blue{
+    background-color: #40afe6;
+}
+
+.dot-black{
+    background-color: #000;
+}
+
+.dot-grey{
+    background-color: #d5d5d5;
+}
+
+.dot-darkblue{
+    background-color: blue
+}
+
+.dot-red{
+    background-color: rgb(194, 9, 9);
+}
+
+.dot-brown{
+    background-color: #caa48d;
+}
+
+.car_equipment_form{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 40px 0 40px 0;
+    border: 5px solid #d5d5d5;
+}
+
+.car_equipment_form fieldset{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    border: none;
+}
+
+.car_equipment_form fieldset label{
+    margin-top: 15px;
+}
+
+.car_equipment_form fieldset label input{
+    margin-right: 7px;
+}
+
+.car_summary{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 250px;
+    font-size: 20px;
+    background-color: rgb(226, 245, 250);
+    padding: 5px 15px;
+}
+
+.car_summary span{
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.order_btn{
+    width: 110px;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(5, 2, 51);
+    border: none;
+    border-radius: 15px;
+    outline: none;
+}
+
+.order_btn:hover{
+    box-shadow: 0 0 5px #40afe6;
+    cursor: pointer;
+}
