@@ -119,3 +119,40 @@
     box-shadow: 0 0 5px #40afe6;
     cursor: pointer;
 }
+
+@media screen and (max-width: 992px){
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .car{
+        width: 100vw;
+        height: auto;
+        margin-right: 10px;
+        padding-right: 20px;
+    }
+
+    .color_dots{
+        width: 300px;
+    }
+
+    .color-dot{
+        width: 30px;
+        height: 30px;
+    }
+
+    .car_summary{
+        top: auto;
+        bottom: 0;
+    }
+
+    .car_equipment_form{
+        flex-direction: column;
+        justify-content: space-between;
+        height: 500px;
+        margin-bottom: 300px;
+    }
+
+
+}
