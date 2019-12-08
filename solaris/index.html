@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>solaris</title>
+
+    <link rel="stylesheet" href="solaris.css" type="text/css">
+</head>
+<body class="body">
+    <main class="main">
+
+        <figure class="car">
+            <img class="car_img" src="img/blue.jpg" alt="">
+        </figure>
+
+        <ul class="color_dots">Цвет
+            <li class="color-dot dot-blue" img-loc="img/blue.jpg"></li>
+            <li class="color-dot dot-black" img-loc="img/black.jpg"></li>
+            <li class="color-dot dot-grey" img-loc="img/grey.jpg"></li>
+            <li class="color-dot dot-darkblue" img-loc="img/darkblue.jpg"></li>
+            <li class="color-dot dot-red" img-loc="img/red.jpg"></li>
+            <li class="color-dot dot-brown" img-loc="img/brown.jpg"></li>
+        </ul>
+
+        <form action="#" class="car_equipment_form">
+            <fieldset class="engine">Двигатель
+                <label for="engine">
+                    <input type="radio" name="engine" value="600000" checked>1.4 л. (100 л.с.)
+                </label>
+                <label for="engine">
+                    <input type="radio" name="engine" value="700000">1.6 л. (123 л.с.)
+                </label>
+            </fieldset>
+
+            <fieldset class="transmission">Коробка передач
+                <label for="transmission">
+                    <input type="radio" name="transmission" value="10000" checked>Ручная, 6 ступеней (6 МТ)
+                </label>
+                <label for="transmission">
+                    <input type="radio" name="transmission" value="50000">Автомат, 6 ступеней (6 АТ)
+                </label>
+            </fieldset>
+
+            <fieldset class="plus_options">Дополнительные опции
+                <label for="option">
+                    <input type="radio" name="option" value="10000" checked>Active
+                </label>
+                <label for="option">
+                    <input type="radio" name="option" value="30000">Active Plus (Кондиционер)
+                </label>
+                <label for="option">
+                    <input type="radio" name="option" value="50000">Comfort (Климатконтроль)
+                </label>
+            </fieldset>
+        </form>
+                
+        <section class="car_summary">
+            <span class="car_name">Hundai Solaris</span>
+            <span class="car_equipment">1.6 - 6AT Comfort</span>
+            <span class="car_price"></span>
+            <span class="car_priceUSD"></span>
+            <button class="order_btn">Заказать</button>
+        </section>
+    
+    </main>
+    
+
+    <script src="jquery341.js"></script>
+    <script src="solaris.js"></script>
+</body>
+</html>
