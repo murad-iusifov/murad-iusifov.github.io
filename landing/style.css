@@ -1,0 +1,319 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #9c9c9c;
+      overflow: hidden;
+}
+
+a {
+      text-decoration: none;
+}
+
+img {
+      width: 100%;
+}
+
+.logo {
+      position: absolute;
+      margin-left: 2em;
+      z-index: 1;
+}
+
+.logo a{
+      color: #fff;
+      font-family: Poppins;
+      line-height: 80px;
+      font-size: 15px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      text-transform: uppercase;
+}
+
+.logo ion-icon {
+      color: #6adb9d;
+      margin-right: 7px;
+      position: relative;
+      top: 1px;
+      z-index: 1;
+}
+
+.contact {
+      position: absolute;
+      right: 100px;
+      z-index: 1;
+}
+
+.contact a{
+      text-decoration: none;
+      color: rgb(124, 124, 124);
+      font-size: 14px;
+      letter-spacing: 2px;
+      font-family: Poppins;
+      line-height: 80px;
+      transition: all 0.3s;
+}
+
+.contact a:hover{
+      color: #fff;
+}
+
+.menu{
+      position: absolute;
+      color: #6adb9d;
+      right: 2em;
+      top: 4px;
+      line-height: 80px;
+      z-index: 1;
+}
+
+.menu ion-icon {
+      font-size: 24px;
+}
+
+.header {
+      position: absolute;
+      top: 25%;
+      left: 50px;
+      z-index: 1;
+}
+
+.ml7 {
+      position: relative;
+      font-weight: 900;
+      font-size: 3.7em;
+}
+
+.ml7 .text-wrapper {
+      position: relative;
+      display: inline-block;
+      padding-top: 0.2em;
+      padding-right: 0.05em;
+      padding-bottom: 0.1em;
+      overflow: hidden;
+}
+
+.ml7 .letter {
+      transform-origin: 0 100%;
+      display: inline-block;
+      line-height: 1em;
+}
+
+h1 {
+      color: #fff;
+      font-family: "Roboto";
+      font-weight: bolder;
+      font-size: 46px !important;
+      margin-bottom: 0px;
+      text-transform: uppercase;
+}
+
+#tagline  {
+      max-width: 640px;
+      margin-right: 30px;
+}
+
+p {
+      color: rgb(53, 53, 53);
+      font-weight: 200;
+      font-family: "Roboto";
+      line-height: 28px;
+      margin-top: 0;
+      margin-bottom: 0;
+}
+
+.buttons {
+      margin-top: 40px;
+}
+
+button {
+      margin-right: 10px;
+      padding: 14px 30px;
+      border: none;
+}
+
+button a{
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 4px;
+      font-weight: 300;
+}
+
+#one {
+      background: none;
+      border: .3pt solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+}
+
+#two {
+      background: linear-gradient(135deg, rgb(106, 219, 157) 0%, rgb(23, 167, 88) 100%);
+      cursor: pointer;
+}
+
+.media {
+      position: absolute;
+      top: 38%;
+      z-index: 1;
+      right: 6%
+}
+
+.media ul {
+      position: absolute;
+      list-style: none;
+}
+
+.media ul li {
+      color: grey;
+      padding: 12px 0;
+      cursor: pointer;
+}
+
+.media ul li ion-icon:hover{
+      color: rgb(34, 199, 144);
+      transform: scale(1.5);
+      transition: all 0.5s;
+}
+
+.bottom-text {
+      position: absolute;
+      z-index: 1;
+      color: grey;
+      font-size: 18px;
+      font-family: monospace;
+      margin-left: 2em;
+      bottom: 40px;
+}
+
+.copyright {
+      position: absolute;
+      z-index: 1;
+      color: grey;
+      font-size: 15px;
+      right: 0;
+      font-family: Roboto;
+      font-weight: 100;
+      margin-right: 2em;
+      bottom: 40px;   
+}
+
+.loading-screen {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background: #7c7c7c;
+      z-index: 2;
+}
+
+.ring {
+      margin: 0%;
+      padding: 0%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      z-index: 2;
+      width: 40%;
+      opacity: 0.7;    
+}
+
+.ringOne img {
+      animation: rotateFirstRing 2s linear infinite;
+}
+
+.ringTwo img {
+      animation: rotateFirstRing 8s linear infinite;
+}
+
+@keyframes rotateFirstRing {
+      from {
+            transform: rotate(0deg);
+      }
+      to {
+            transform: rotate(360deg);
+      }
+}
+
+@media(max-width: 1080px) {
+      .media {
+            right: 8%
+      }
+}
+
+@media(max-width: 768px) {
+      .media {
+            right: 11%
+      }
+}
+
+@media(max-width: 609px) {
+      .logo {
+            margin-left: 1em;
+        }
+      .header{
+            top: 17%;
+            left: 20px;
+      }
+      h1{
+            font-size: 37px !important;
+      }
+      #tagline {
+            max-width: 360px;
+            margin-right: 20px;
+      }
+      .media {
+            top: 30%;
+            right: 12%
+      }
+      .bottom-text {
+            bottom: 48px;
+            font-size: 15px;
+      }
+      .copyright {
+            left: 22px;
+            bottom: 17px;
+            font-size: 13px;
+      }
+}
+
+@media(max-width: 500px){
+      h1{
+            font-size: 25px !important;
+      }
+      #tagline {
+            font-size: 12px;
+      }
+      .contact {
+            top: 30px;
+            left: 40px;
+      }
+      .media {
+            right: 16%;
+      }
+
+}
+
+@media(max-width: 410px){
+      h1{
+            font-size: 25px !important;
+            margin-bottom: 10px;
+      }
+      #tagline {
+            font-size: 12px;
+      }
+      .media {
+            right: 16%;
+      }
+      #tagline {
+            max-width: 282px;
+      }
+      .media {
+            right: 19%;
+      }
+}
+@media(max-width: 350px){
+      .bottom-text,
+      .copyright{
+            display: none;
+      }
+}
