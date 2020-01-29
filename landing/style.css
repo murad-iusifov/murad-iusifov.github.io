@@ -60,7 +60,7 @@ img {
       color: #fff;
 }
 
-.menu{
+.whatsapp-icon_wrap{
       position: absolute;
       color: #6adb9d;
       right: 2em;
@@ -69,7 +69,7 @@ img {
       z-index: 1;
 }
 
-.menu ion-icon {
+.whatsapp-icon_wrap ion-icon {
       font-size: 24px;
 }
 
@@ -289,9 +289,17 @@ button a{
       #tagline {
             font-size: 12px;
       }
+      body .whatsapp-icon_wrap {
+            bottom: 0;
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 10px;
+      }
       .contact {
-            top: 30px;
-            left: 40px;
+            bottom: 0;
+      }
+      .contact a{
+            line-height: 40px;
       }
       .media {
             right: 16%;
@@ -319,5 +327,11 @@ button a{
       }
       .media {
             right: 19%;
+      }
+}
+
+@media(max-width: 340px){
+      .buttons {
+            margin-top: 15px;
       }
 }
