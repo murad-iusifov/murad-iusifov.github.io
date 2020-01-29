@@ -360,8 +360,11 @@ button a{
       }
 }
 
-@media(max-width: 340px){
-      .buttons {
-            margin-top: 15px;
+@media(max-width: 350px){
+      body .whatsapp-icon_wrap {
+            display: none;
+      }
+      .contact {
+            display: none;
       }
 }
