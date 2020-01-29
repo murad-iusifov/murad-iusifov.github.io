@@ -2,10 +2,10 @@ html, body {
       margin: 0;
       padding: 0;
       width: 100vw;
-      height: 100vh;
+      height: 100%;
       font-family: "Roboto";
       background: #080707;
-      overflow: hidden;
+      overflow-x: hidden;
 }
 
 a {
@@ -35,7 +35,7 @@ img {
 .logo ion-icon {
       color: #6adb9d;
       margin-right: 7px;
-      position: relative;
+      position: absolute;
       top: 1px;
       z-index: 1;
 }
@@ -83,13 +83,13 @@ img {
 }
 
 .ml7 {
-      position: relative;
+      position: absolute;
       font-weight: 900;
       font-size: 3.7em;
 }
 
 .ml7 .text-wrapper {
-      position: relative;
+      position: absolute;
       display: inline-block;
       padding-top: 0.2em;
       padding-right: 0.05em;
