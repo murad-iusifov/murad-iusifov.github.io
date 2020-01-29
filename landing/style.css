@@ -83,13 +83,13 @@ img {
 }
 
 .ml7 {
-      position: absolute;
+      position: relative;
       font-weight: 900;
       font-size: 3.7em;
 }
 
 .ml7 .text-wrapper {
-      position: absolute;
+      position: relative;
       display: inline-block;
       padding-top: 0.2em;
       padding-right: 0.05em;
