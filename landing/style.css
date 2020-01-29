@@ -358,9 +358,6 @@ button a{
       .media {
             right: 19%;
       }
-}
-
-@media(max-width: 350px){
       body .whatsapp-icon_wrap {
             display: none;
       }
