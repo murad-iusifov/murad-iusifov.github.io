@@ -315,16 +315,6 @@ button a{
       #tagline {
             font-size: 12px;
       }
-      body .whatsapp-icon_wrap {
-            bottom: -30px;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: end;
-                -ms-flex-align: end;
-                    align-items: flex-end;
-            margin-bottom: 10px;
-      }
       .contact {
             bottom: -30px;
       }
@@ -358,10 +348,10 @@ button a{
       .media {
             right: 19%;
       }
-      body .whatsapp-icon_wrap {
-            display: none;
-      }
-      .contact {
-            display: none;
+}
+
+@media(max-width: 340px){
+      .buttons {
+            margin-top: 15px;
       }
 }

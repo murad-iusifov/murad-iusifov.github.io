@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="">
+                    <span class="logo_text">
+                        akmarket40.ru
+                    </span>
+                </a>
+            </div>
+
+            <div class="header_panel">
+                <div class="top">
+                    <div class="part1">
+                        <address>
+                            <span class="icon">
+                                <img src="img/icons/loc.png" alt="">
+                            </span>
+                            <span class="content">
+                                г. Калуга, ул. Московская 326
+                            </span>
+                        </address>
+                        <div class="tel">
+                            <a href="tel:89208850134">
+                                <span class="icon">
+                                    <img src="img/icons/phone.png" alt="">
+                                </span>
+                                <span class="content">
+                                    +7 920 885 01 34
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <div class="info">
+                            <a href="#">Гарантия</a>
+                            <a href="#">Возврат и доставка</a>
+                        </div>
+                        <div class="auth">
+                            <span class="icon">
+                                <img src="img/icons/auth.png" alt="">
+                            </span>
+                            <a href="cabinet.html">Вход</a>
+                            <span>|</span>
+                            <a href="#" class="_reg" >Регистрация</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="header_catalog">
+                        <img src="img/icons/header_cataloq.png">
+                        <span>Каталог <span class="for_hide">товаров</span></span>
+                    </div>
+                    <form class="vin_search">
+                        <input type="text" name="vin" placeholder="Поиск по VIN - номеру">
+                        <button>
+                            <img src="img/icons/search.png">
+                        </button>
+                    </form>
+                    <div class="icons">
+                        <a href="cabinet.html" class="comparison">
+                            <img src="img/icons/comparison.png">
+                        </a>
+                        <a href="#" class="save">
+                            <img src="img/icons/like.png">
+                        </a>
+                        <a href="cart.html" class="cart">
+                            <img src="img/icons/cart.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hamburger hamburger--collapse">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <nav class="main_nav mobile_menu">
+
+        <div class="container">
+
+            <ul class="menu">
+                <li class="menu_item">
+                    <a href="about.html">О компании</a>
+                </li>
+                <li class="menu_item">
+                    <a href="catalog.html">Каталог</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">Сотрудничество</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">Покупателю</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">Оптовикам</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">Частые вопросы</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">Отзывы</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">Розничные магазины</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <main class="cabinet_page">
+        <div class="container">
+
+            <span class="cabinet_wrapper">
+                <span class="user_block">
+                    <span class="switching_block">
+                        <span class="element user" data-id="user">
+                            <span class="img">
+                                <img src="img/icons/user.png">
+                            </span>
+                            <span class="inner">
+                                <h4>
+                                    Александр Александров
+                                </h4>
+                                <span class="email">
+                                    alex_alexandrow@mail.ru
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="switching_block">
+                        <span class="element my_orders" data-id="my_orders">
+                            <span class="title">
+                                <span class="icon">
+                                    <img src="img/icons/ordcab.png">
+                                </span>
+                                <span>Мои заказы</span>
+                            </span>
+                            <span class="info"></span>
+                        </span>
+                        <span class="element my_balance" data-id="my_balance">
+                            <span class="title">
+                                <span class="icon">
+                                    <img src="img/icons/cabbalance.png">
+                                </span>
+                                <span>Баланс</span>
+                            </span>
+                            <span class="info">0 р.</span>
+                        </span>
+                        <span class="element delayed_goods" data-id="delayed_goods">
+                            <span class="title">
+                                <span class="icon">
+                                    <img src="img/icons/cabhearth.png">
+                                </span>
+                                <span>Отложенные товары</span>
+                            </span>
+                            <span class="info">2</span>
+                        </span>
+                    </span>
+                    <span class="switching_block">
+                        <span class="element goods_history" data-id="goods_history">
+                            <span class="title">
+                                <span class="icon">
+                                    <img src="img/icons/cabhistory.png">
+                                </span>
+                                <span>История товаров</span>
+                            </span>
+                            <span class="info"></span>
+                        </span>
+                        <span class="element goods_comparison active" data-id="goods_comparison">
+                            <span class="title">
+                                <span class="icon">
+                                    <img src="img/icons/cabcompar.png">
+                                </span>
+                                <span>Сравнение товаров</span>
+                            </span>
+                            <span class="info"></span>
+                        </span>
+                        <span class="element reviews_selections" data-id="reviews_selections">
+                            <span class="title">
+                                <span class="icon">
+                                    <img src="img/icons/cabring.png">
+                                </span>
+                                <span>Рецензии и подборки</span>
+                            </span>
+                            <span class="info"></span>
+                        </span>
+                    </span>
+                </span>
+                <span class="content">
+                    <span id="user">
+                        <span class="part">
+                            <h2>Мой профиль</h2>
+                            <span class="personal_info">
+                                <input type="text" name="name" class="name" placeholder="Ваше имя">
+                                <input type="text" name="lastname" class="lastname" placeholder="Ваша фамилия">
+                                <input type="text" name="email" class="email" placeholder="Ваш E-mail">
+                                <input type="text" name="tel" class="tel">
+                                <label>
+                                    <input type="text" name="new_password" class="new_password" placeholder="Новый пароль">
+                                    <img src="img/icons/passw.png">
+                                </label>
+                                <input type="text" name="confirm_password" class="confirm_password" placeholder="Подтверждение пароля">
+                            </span>
+                        </span>
+                        <span class="part">
+                            <span class="notifications">
+                                <p class="check">Уведомления <input type="checkbox" name="notifications"></p>
+                                <p>
+                                    Учавствовать в акциях и уведомлять меня по E-mail о доступных промокодах, подарках и спецпредложениях
+                                </p>
+                            </span>
+                            <span class="action_buttons">
+                                <button class="save">
+                                    Сохранить изменения
+                                </button>
+                                <button class="cancel">
+                                    Отменить
+                                </button>
+                            </span>
+                            <span class="delete_profile">
+                                <button>
+                                    Удалить профиль
+                                </button>
+                                <span>
+                                    Будут удалены: Ваш E-mail, телефон, а также история заказов
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                    <span id="my_orders">
+                        <span class="part">
+                            <h2>Мои заказы</h2>
+                            <p class="order_number">Заказ №<span>3824 3049</span></p>
+                            <p class="common_info">
+                                <span class="element">
+                                    Товаров: <span>4</span>
+                                </span>
+                                <span class="element">
+                                    Масса: <span>14504 г.</span>
+                                </span>
+                                <span class="element">
+                                    Стоимость: <span>15 690 р.</span>
+                                </span>
+                                <span class="element">
+                                    Статус: <span>Доставлен</span>
+                                </span>
+                            </p>
+                            <button type="button" class="repeat_order">
+                                Повторить заказ
+                            </button>
+                            <span class="info_table">
+                                <span class="titles">
+                                    <span class="id">ID товара</span>
+                                    <span class="name">Наименование</span>
+                                    <span class="price">Цена</span>
+                                    <span class="sale">Скидка</span>
+                                    <span class="discount">Цена со скидкой</span>
+                                    <span class="quantity">Кол-во</span>
+                                </span>
+                                <span class="tbody">
+                                    <span class="product">
+                                        <span class="id">
+                                            <span class="_mob">ID товара</span>
+                                            1283443
+                                        </span>
+                                        <span class="name">
+                                            <span class="_mob">Наименование</span>
+                                            <a href="#">
+                                                Аккумулятор Forse 60 Ah (0) 600A 6СТ-60
+                                            </a>
+                                        </span>
+                                        <span class="price">
+                                            <span class="_mob">Цена</span>
+                                            650 руб.
+                                        </span>
+                                        <span class="sale">
+                                            <span class="_mob">Скидка</span>
+                                            15%
+                                        </span>
+                                        <span class="discount">
+                                            <span class="_mob">Цена со скидкой</span>
+                                            623 руб.
+                                        </span>
+                                        <span class="quantity">
+                                            <span class="_mob">Кол-во</span>
+                                            1
+                                        </span>
+                                    </span>
+                                    <span class="product">
+                                        <span class="id">
+                                            <span class="_mob">ID товара</span>
+                                            1283443
+                                        </span>
+                                        <span class="name">
+                                            <span class="_mob">Наименование</span>
+                                            <a href="#">
+                                                Аккумулятор Forse 60 Ah (0) 600A 6СТ-60
+                                            </a>
+                                        </span>
+                                        <span class="price">
+                                            <span class="_mob">Цена</span>
+                                            650 руб.
+                                        </span>
+                                        <span class="sale">
+                                            <span class="_mob">Скидка</span>
+                                            15%
+                                        </span>
+                                        <span class="discount">
+                                            <span class="_mob">Цена со скидкой</span>
+                                            623 руб.
+                                        </span>
+                                        <span class="quantity">
+                                            <span class="_mob">Кол-во</span>
+                                            1
+                                        </span>
+                                    </span>
+                                    <span class="product">
+                                        <span class="id">
+                                            <span class="_mob">ID товара</span>
+                                            1283443
+                                        </span>
+                                        <span class="name">
+                                            <span class="_mob">Наименование</span>
+                                            <a href="#">
+                                                Аккумулятор Forse 60 Ah (0) 600A 6СТ-60
+                                            </a>
+                                        </span>
+                                        <span class="price">
+                                            <span class="_mob">Цена</span>
+                                            650 руб.
+                                        </span>
+                                        <span class="sale">
+                                            <span class="_mob">Скидка</span>
+                                            15%
+                                        </span>
+                                        <span class="discount">
+                                            <span class="_mob">Цена со скидкой</span>
+                                            623 руб.
+                                        </span>
+                                        <span class="quantity">
+                                            <span class="_mob">Кол-во</span>
+                                            1
+                                        </span>
+                                    </span>
+                                    <span class="product">
+                                        <span class="id">
+                                            <span class="_mob">ID товара</span>
+                                            1283443
+                                        </span>
+                                        <span class="name">
+                                            <span class="_mob">Наименование</span>
+                                            <a href="#">
+                                                Аккумулятор Forse 60 Ah (0) 600A 6СТ-60
+                                            </a>
+                                        </span>
+                                        <span class="price">
+                                            <span class="_mob">Цена</span>
+                                            650 руб.
+                                        </span>
+                                        <span class="sale">
+                                            <span class="_mob">Скидка</span>
+                                            15%
+                                        </span>
+                                        <span class="discount">
+                                            <span class="_mob">Цена со скидкой</span>
+                                            623 руб.
+                                        </span>
+                                        <span class="quantity">
+                                            <span class="_mob">Кол-во</span>
+                                            1
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                            <p class="to_pay">
+                                Вам необходимо оплатить <span>15 024 руб.</span>
+                            </p>
+                            <span class="order_check">
+                                <p class="section">
+                                    <span class="info">
+                                        Способ оплаты:
+                                        <span>Наличными / картой в пункте самовывоза</span>
+                                    </span>
+                                    <span class="info">
+                                        Способ Доставки:
+                                        <a href="#">г. Калуга, ул. Гагарина, д.4</a>
+                                    </span>
+                                    <span class="info">
+                                        График работы:
+                                        <span>ежедневно с 9:00 до 21:00</span>
+                                    </span>
+                                </p>
+                                <p class="section">
+                                    <span class="recipient_info">
+                                        <span class="title">Данные получателя:</span>
+                                        <span class="name">Александр Александров</span>
+                                        <span class="tel">+7 (945) 424 - 23 - 23</span>
+                                    </span>
+                                </p>
+                            </span>
+                            <span class="order_history">
+                                <div class="title">История заказа:</div>
+                                <p>
+                                    <span class="date">13 сентября 2020 15:23:18</span>
+                                    <span class="status">Заказ оформлен</span>
+                                </p>
+                                <p>
+                                    <span class="date">13 сентября 2020 15:23:18</span>
+                                    <span class="status">Заказ передан на комплектацию</span>
+                                </p>
+                                <p>
+                                    <span class="date">13 сентября 2020 15:23:18</span>
+                                    <span class="status">Отправлен из Москвы в службу доставки Вашего города</span>
+                                </p>
+                                <p>
+                                    <span class="date">13 сентября 2020 15:23:18</span>
+                                    <span class="status">Заказ прибыл в пункт самовывоза (срок хранения в пункте)</span>
+                                </p>
+                            </span>
+                        </span>
+                        <span class="part second">
+                            <h2>История заказов</h2>
+                            <span class="order_status">
+                                <p class="order">
+                                    <span class="id">№1283443</span>
+                                    <span class="date">12.07.2019</span>
+                                    <span class="status">Выполнен</span>
+                                    <span class="summ">
+                                        Сумма заказа:
+                                        <span>12 843 руб.</span>
+                                    </span>
+                                    <a href="#" class="more">Подробнее</a>
+                                    <span class="delete">
+                                        <i></i>
+                                    </span>
+                                </p>
+                                <p class="order">
+                                    <span class="id">№1283443</span>
+                                    <span class="date">12.07.2019</span>
+                                    <span class="status">Выполнен</span>
+                                    <span class="summ">
+                                        Сумма заказа:
+                                        <span>12 843 руб.</span>
+                                    </span>
+                                    <a href="#" class="more">Подробнее</a>
+                                    <span class="delete">
+                                        <i></i>
+                                    </span>
+                                </p>
+                                <p class="order">
+                                    <span class="id">№1283443</span>
+                                    <span class="date">12.07.2019</span>
+                                    <span class="status">Выполнен</span>
+                                    <span class="summ">
+                                        Сумма заказа:
+                                        <span>12 843 руб.</span>
+                                    </span>
+                                    <a href="#" class="more">Подробнее</a>
+                                    <span class="delete">
+                                        <i></i>
+                                    </span>
+                                </p>
+                            </span>
+                        </span>
+                    </span>
+                    <span id="my_balance">
+                        <span class="part">
+                            <h2>Баланс</h2>
+                        </span>
+                    </span>
+                    <span id="delayed_goods">
+                        <span class="part">
+                            <h2>Отложенные товары</h2>
+                        </span>
+                    </span>
+                    <span id="goods_history">
+                        <span class="part">
+                            <h2>История товаров</h2>
+                        </span>
+                    </span>
+                    <span id="goods_comparison" class="active">
+                        <span class="part">
+                            <span class="top_wrap">
+                                <h2>Cравнение товаров</h2>
+                                <button type="button" class="clear_btn">Очистить список</button>
+                            </span>
+                            <div class="compare_block">
+
+                                <div class="info_2">
+
+                                    <a href="#" class="all_parameters active">
+                                        Все параметры
+                                    </a>
+                    
+                                    <i></i>
+                    
+                                    <a href="#" class="differences">
+                                        Различия
+                                    </a>
+                    
+                                    <i></i>
+                    
+                                    <b></b>
+                                    
+                                </div>
+      
+                                <div class="compare_column titles_column">
+                                    <div class="top"></div>
+                                    <div class="bottom">
+                                        <ul class="titles">
+                                            <li class="сapacity">
+                                                Ёмкость, А*ч
+                                            </li>
+                                            <li class="length">
+                                                Длина, мм
+                                            </li>
+                                            <li class="cleat_type">
+                                                Тип клемм
+                                            </li>
+                                            <li class="polarity">
+                                                Полярность
+                                            </li>
+                                            <li class="service_need">
+                                                Необходимость обслуживания
+                                            </li>
+                                            <li class="starting_current">
+                                                Пусковой ток, А
+                                            </li>
+                                            <li class="car_type">
+                                                Тип автомобиля
+                                            </li>
+                                            <li class="height">
+                                                Высота, мм
+                                            </li>
+                                            <li class="akb_type">
+                                                Тип АКБ
+                                            </li>
+                                            <li class="width">
+                                                Ширина, мм
+                                            </li>
+                                            <li class="voltage">
+                                                Напряжение, В
+                                            </li>
+                                            <li class="weight">
+                                                Вес, кг
+                                            </li>
+                                            <li class="manufacturer_country">
+                                                Страна-производитель товара
+                                            </li>
+                                            <li class="register_country">
+                                                Страна регистрации бренда
+                                            </li>
+                                            <li class="guarantee">
+                                                Гарантия
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                
+                                <div class="compare_column _mob">
+                
+                                    <div class="main_column slider">
+                
+                                        <div class="for_compare inner_column">
+                
+                                            <div class="top">
+                
+                                                <div class="slide_card">
+                
+                                                    <div class="product_img">
+                                                        <img src="img/catalog_card.png" alt="">
+                                                        <b></b>
+                                                    </div>
+                                                    
+                                                    <div class="product_title">
+                                                        <a href="product_card.html">
+                                                            <span>
+                                                                Аккумулятор Forse 60 Ah (0) 600A 6CT-60
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                
+                                                    <div class="price">
+                                                        <div class="actual">7 199 руб.</div>
+                                                        <div class="old">8 700 руб.</div>
+                                                    </div>
+                
+                                                </div>
+                
+                                            </div>
+                
+                                            <ul class="titles">
+                                                <li class="сapacity">
+                                                    65
+                                                </li>
+                                                <li class="length">
+                                                    242
+                                                </li>
+                                                <li class="cleat_type">
+                                                    Euro-type 1
+                                                </li>
+                                                <li class="polarity">
+                                                    Обратная
+                                                </li>
+                                                <li class="service_need">
+                                                    обслуживаемый
+                                                </li>
+                                                <li class="starting_current">
+                                                    640
+                                                </li>
+                                                <li class="car_type">
+                                                    Легковой
+                                                </li>
+                                                <li class="height">
+                                                    190
+                                                </li>
+                                                <li class="akb_type">
+                                                    Свинцово-кислотный
+                                                </li>
+                                                <li class="width">
+                                                    175
+                                                </li>
+                                                <li class="voltage">
+                                                    12 В
+                                                </li>
+                                                <li class="weight">
+                                                    16.5
+                                                </li>
+                                                <li class="manufacturer_country">
+                                                    Украина
+                                                </li>
+                                                <li class="register_country">
+                                                    Украина
+                                                </li>
+                                                <li class="guarantee">
+                                                    24 месяца
+                                                </li>
+                                                <li class="to_buy_list">
+                                                    <button>
+                                                        <span>Добавить в корзину</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                
+                                        </div>
+
+                                        <div class="for_compare inner_column">
+                
+                                            <div class="top">
+                
+                                                <div class="slide_card">
+                
+                                                    <div class="product_img">
+                                                        <img src="img/catalog_card2.png" alt="">
+                                                        <b></b>
+                                                    </div>
+                                                    
+                                                    <div class="product_title">
+                                                        <a href="product_card.html">
+                                                            <span>
+                                                                Аккумулятор Forse 60 Ah (0) 600A 6CT-60
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                
+                                                    <div class="price">
+                                                        <div class="actual">7 199 руб.</div>
+                                                        <div class="old">8 700 руб.</div>
+                                                    </div>
+                
+                                                </div>
+                
+                                            </div>
+                
+                                            <ul class="titles">
+                                                <li class="сapacity">
+                                                    65
+                                                </li>
+                                                <li class="length">
+                                                    242
+                                                </li>
+                                                <li class="cleat_type">
+                                                    Euro-type 1
+                                                </li>
+                                                <li class="polarity">
+                                                    Обратная
+                                                </li>
+                                                <li class="service_need">
+                                                    обслуживаемый
+                                                </li>
+                                                <li class="starting_current">
+                                                    640
+                                                </li>
+                                                <li class="car_type">
+                                                    Легковой
+                                                </li>
+                                                <li class="height">
+                                                    190
+                                                </li>
+                                                <li class="akb_type">
+                                                    Свинцово-кислотный
+                                                </li>
+                                                <li class="width">
+                                                    175
+                                                </li>
+                                                <li class="voltage">
+                                                    12 В
+                                                </li>
+                                                <li class="weight">
+                                                    16.5
+                                                </li>
+                                                <li class="manufacturer_country">
+                                                    Украина
+                                                </li>
+                                                <li class="register_country">
+                                                    Украина
+                                                </li>
+                                                <li class="guarantee">
+                                                    24 месяца
+                                                </li>
+                                                <li class="to_buy_list">
+                                                    <button>
+                                                        <span>Добавить в корзину</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                
+                                        </div>
+
+                                        <div class="for_compare inner_column">
+                
+                                            <div class="top">
+                
+                                                <div class="slide_card">
+                
+                                                    <div class="product_img">
+                                                        <img src="img/catalog_card2.png" alt="">
+                                                        <b></b>
+                                                    </div>
+                                                    
+                                                    <div class="product_title">
+                                                        <a href="product_card.html">
+                                                            <span>
+                                                                Аккумулятор Forse 60 Ah (0) 600A 6CT-60
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                
+                                                    <div class="price">
+                                                        <div class="actual">7 199 руб.</div>
+                                                        <div class="old">8 700 руб.</div>
+                                                    </div>
+                
+                                                </div>
+                
+                                            </div>
+                
+                                            <ul class="titles">
+                                                <li class="сapacity">
+                                                    65
+                                                </li>
+                                                <li class="length">
+                                                    242
+                                                </li>
+                                                <li class="cleat_type">
+                                                    Euro-type 1
+                                                </li>
+                                                <li class="polarity">
+                                                    Обратная
+                                                </li>
+                                                <li class="service_need">
+                                                    обслуживаемый
+                                                </li>
+                                                <li class="starting_current">
+                                                    640
+                                                </li>
+                                                <li class="car_type">
+                                                    Легковой
+                                                </li>
+                                                <li class="height">
+                                                    190
+                                                </li>
+                                                <li class="akb_type">
+                                                    Свинцово-кислотный
+                                                </li>
+                                                <li class="width">
+                                                    175
+                                                </li>
+                                                <li class="voltage">
+                                                    12 В
+                                                </li>
+                                                <li class="weight">
+                                                    16.5
+                                                </li>
+                                                <li class="manufacturer_country">
+                                                    Украина
+                                                </li>
+                                                <li class="register_country">
+                                                    Украина
+                                                </li>
+                                                <li class="guarantee">
+                                                    24 месяца
+                                                </li>
+                                                <li class="to_buy_list">
+                                                    <button>
+                                                        <span>Добавить в корзину</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                
+                                        </div>
+
+                                        <div class="for_compare inner_column">
+                
+                                            <div class="top">
+                
+                                                <div class="slide_card">
+                
+                                                    <div class="product_img">
+                                                        <img src="img/catalog_card2.png" alt="">
+                                                        <b></b>
+                                                    </div>
+                                                    
+                                                    <div class="product_title">
+                                                        <a href="product_card.html">
+                                                            <span>
+                                                                Аккумулятор Forse 60 Ah (0) 600A 6CT-60
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                
+                                                    <div class="price">
+                                                        <div class="actual">7 199 руб.</div>
+                                                        <div class="old">8 700 руб.</div>
+                                                    </div>
+                
+                                                </div>
+                
+                                            </div>
+                
+                                            <ul class="titles">
+                                                <li class="сapacity">
+                                                    65
+                                                </li>
+                                                <li class="length">
+                                                    242
+                                                </li>
+                                                <li class="cleat_type">
+                                                    Euro-type 1
+                                                </li>
+                                                <li class="polarity">
+                                                    Обратная
+                                                </li>
+                                                <li class="service_need">
+                                                    обслуживаемый
+                                                </li>
+                                                <li class="starting_current">
+                                                    640
+                                                </li>
+                                                <li class="car_type">
+                                                    Легковой
+                                                </li>
+                                                <li class="height">
+                                                    190
+                                                </li>
+                                                <li class="akb_type">
+                                                    Свинцово-кислотный
+                                                </li>
+                                                <li class="width">
+                                                    175
+                                                </li>
+                                                <li class="voltage">
+                                                    12 В
+                                                </li>
+                                                <li class="weight">
+                                                    16.5
+                                                </li>
+                                                <li class="manufacturer_country">
+                                                    Украина
+                                                </li>
+                                                <li class="register_country">
+                                                    Украина
+                                                </li>
+                                                <li class="guarantee">
+                                                    24 месяца
+                                                </li>
+                                                <li class="to_buy_list">
+                                                    <button>
+                                                        <span>Добавить в корзину</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                
+                                        </div>
+                
+                                    </div>
+                
+                                </div>
+                
+                            </div>
+                        </span>
+                    </span>
+                    <span id="reviews_selections">
+                        <span class="part">
+                            <h2>Рецензии и подборки</h2>
+                        </span>
+                    </span>
+                </span>
+            </span>
+
+        </div>
+    </main>
+
+    <section class="feedback">
+        <div class="container">
+            <div class="img" style="background-image: url('img/feedback.png');"></div>
+            <h2>
+                Необходима консультация?
+            </h2>
+            <p>
+                Заполните все необходимые поля и наш менеджер свяжется с Вами в ближайшее время
+            </p>
+            <form>
+                <input type="text" name="name" placeholder="Ваше имя">
+                <input type="text" name="phone">
+                <button>Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+
+            <div class="top">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/footer_logo.png">
+                        <span class="logo_text">
+                            akmarket40.ru
+                        </span>
+                    </a>
+                </div>
+                <div class="part1">
+                    <address>
+                        <span class="icon">
+                            <img src="img/icons/footer_loc.png">
+                        </span>
+                        <span class="content">
+                            г. Калуга, ул. Московская 326
+                        </span>
+                    </address>
+                    <a href="mailto:info@akmarket40.ru">
+                        <span class="icon">
+                            <img src="img/icons/footer_mail.png">
+                        </span>
+                        <span class="content">
+                            info@akmarket40.ru
+                        </span>
+                    </a>
+                </div>
+                <div class="part2">
+                    <div class="tels">
+                        <span class="icon">
+                            <img src="img/icons/footer_tel.png">
+                        </span>
+                        <a href="tel:">+7 (4842) 40-15-99</a>
+                        <b class="line">|</b>
+                        <a href="tel:">+7 920 885 01 34</a>
+                    </div>
+                    <div class="work_schedule">
+                        <span class="icon">
+                            <img src="img/icons/footer_schedule.png">
+                        </span>
+                        <span>
+                            пн-пт. с 8-00 до 19-00
+                        </span>
+                        <b class="line">|</b>
+                        <span>
+                            сб-вс. с 10-00 до 15-00
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main_nav">
+                <ul class="menu">
+                    <li class="menu_item">
+                        <a href="#">О компании</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">Каталог</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">Сотрудничество</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">Покупателю</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">Оптовикам</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">Частые вопросы</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">Отзывы</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">Розничные магазины</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="footer_catalog">
+                <div class="category">
+                    <h3>Защита и гигиена</h3>
+                    <a href="#">Антисептики</a>
+                    <a href="#">Салфетки антибактериальные</a>
+                    <a href="#">Очки защитные</a>
+                </div>
+                <div class="category">
+                    <h3>Шины</h3>
+                    <a href="#">Летние</a>
+                    <a href="#">Зимние</a>
+                    <a href="#">Всесезонные</a>
+                </div>
+                <div class="category">
+                    <h3>Щётки стеклоочистителя</h3>
+                    <a href="#">Бескаркасные</a>
+                    <a href="#">Каркасные</a>
+                </div>
+                <div class="category">
+                    <h3>Диски</h3>
+                    <a href="#">Литые</a>
+                    <a href="#">Штампованные</a>
+                </div>
+                <div class="category">
+                    <h3>Аксессуары</h3>
+                    <a href="#">Дефлекторы</a>
+                    <a href="#">Коврики</a>
+                    <a href="#">Защита</a>
+                </div>
+                <div class="category">
+                    <h3>Электрооборудование</h3>
+                    <a href="#">Аккумуляторы</a>
+                    <a href="#">Лампы и свет</a>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="copyright">
+                    <span>
+                        © 2009-2019 ООО "АВТОКОНТАКТ" | Все права защищены
+                    </span>
+                </div>
+                <div class="links">
+                    <span>Создание сайта</span>
+                    <a href="#" class="site">Veles-web.ru</a>
+                    <a href="#" class="privacy">Политика обработки персональных данных</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal">
+            <div class="wrapper">
+                <div class="modal_inner registration">
+                    <div class="close">
+                        <span></span>
+                    </div>
+                    <h2>Регистрация</h2>
+                    <form>
+                        <div >
+                            <div class="top">
+                                <label class="individual">
+                                    <input type="radio" name="user_status" value="individual" checked>
+                                    <span>Физическое лицо</span>
+                                </label>
+                                <label class="entity">
+                                    <input type="radio" name="user_status" value="entity">
+                                    <span>Юридическое лицо</span>
+                                </label>
+                            </div>
+                            <div class="form_inputs">
+                                <div class="individual">
+                                    <input type="text" name="name" placeholder="Ваше имя" required>
+                                    <input type="text" name="lastname" placeholder="Ваша фамилия" required>
+                                    <input type="text" name="fathername" class="fathername" placeholder="Ваше отчество">
+                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="text" name="phone" required>
+                                    <input type="text" name="password" placeholder="Пароль" required>
+                                    <input type="text" name="confirm_password" placeholder="Подтверждение пароля" required>
+                                    <input type="text" name="phone" placeholder="Введите код с картинки">
+                                    <span class="code_img"><img src="img/code.png"></span>
+                                    <label class="reg_btn">
+                                        <input type="submit" value="Регистрация">
+                                    </label>
+                                </div>
+                                <div class="entity">
+                                    <input type="text" name="organization_name" class="organization_name" placeholder="Наименование организации" required>
+                                    <input type="email" name="inn" placeholder="ИНН" required>
+                                    <input type="email" name="kpp" placeholder="КПП" required>
+                                    <input type="email" name="fullname" class="fullname" placeholder="ФИО" required>
+                                    <input type="email" name="address" class="address" placeholder="Юридический адрес" required>
+                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="text" name="phone" required>
+                                    <input type="text" name="password" placeholder="Пароль" required>
+                                    <input type="text" name="confirm_password" placeholder="Подтверждение пароля" required>
+                                    <input type="text" name="phone" placeholder="Введите код с картинки">
+                                    <span class="code_img"><img src="img/code.png"></span>
+                                    <label class="reg_btn">
+                                        <input type="submit" value="Регистрация">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal_inner success">
+                    <div class="close">
+                        <span></span>
+                    </div>
+                    <div class="img">
+                        <img src="img/modal.png">
+                    </div>
+                    <h2>Регистрация прошла успешно</h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/libs.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
