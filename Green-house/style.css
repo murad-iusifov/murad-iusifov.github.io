@@ -1,0 +1,622 @@
+@font-face{
+    font-family: 'myriad_pro';
+    src: url('fonts/ofont.ru_myriad\ pro\ regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'montserrat';
+    src: url('fonts/montserrat.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'montserrat_black';
+    src: url('fonts/monserrat_black.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'myriad_pro';
+}
+
+.container{
+    flex-basis: 1170px;
+    max-width: 100%;
+}
+
+section{
+    padding: 80px 0;
+}
+
+section,
+header,
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #060604;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo{
+    width: 250px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li{
+    margin-left: 40px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 23px;
+}
+
+/* SECTION BANNER */
+
+.banner{
+    position: relative;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner .container{
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 130px 0;
+}
+
+h1{
+    width: 670px;
+    text-transform: uppercase;
+    font-size: 45px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.banner .container p{
+    font-size: 27px;
+    margin-top: 60px;
+}
+
+.banner .container .buttons{
+    display: flex;
+    margin-top: 160px;
+}
+
+.banner .container .buttons button{
+    font-size: 27px;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #37ab1c;
+    padding: 20px 40px;
+    border-radius: 40px;
+    margin-left: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.banner .container .buttons button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.banner .container .buttons button:hover{
+    background-color: #37ab1c;
+}
+
+/* LOW PRICES  SECTION */
+
+.low_prices{
+    background-color: #f7f7f7;
+}
+
+.low_prices .container{
+    position: relative;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2{
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.low_prices .container h2{
+    width: 550px;
+}
+
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    background-color: #37b221;
+}
+
+.concurents{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    max-width: 1120px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
+}
+
+.concurents span{
+    font-family: 'montserrat_black';
+    font-weight: 700;
+    font-size: 81px;
+    color: #2f2f2f;
+}
+
+.links a{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.links a img{
+    width: 100%;
+    max-height: 76px;
+}
+
+.low_prices .container p{
+    font-size: 26px;
+}
+
+/* YOUR PROFIT SECTION */
+
+.your_profit{
+    background: linear-gradient(0deg, #34650d, #37b722);
+}
+
+.your_profit h2{
+    color: #fff;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.your_profit .card{
+    width: 370px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.rhombus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(0deg, #53ab17, #3cb521);
+    border-radius: 10px;
+    transform: rotate(45deg);
+    padding: 20px;
+    margin: 30px auto;
+}
+
+.rhombus img{
+    width: 40px;
+    transform: rotate(-45deg);
+}
+
+.your_profit h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.your_profit p{
+    max-width: 320px;
+    font-size: 13px;
+    color: #515151;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* OFFERS SECTION */
+
+.offers{
+    background-color: #e6e6e6;
+}
+
+.offers .card{
+    width: 370px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.offers .card img{
+    width: 100%;
+    max-height: 230px;
+}
+
+.card_info,
+.card_info div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_info h3{
+    margin-top: 20px;
+    font-size: 23px;
+}
+
+.card_info div{
+    margin-top: 10px;
+}
+
+.card_info span{
+    font-size: 13px;
+    color: #696969;
+}
+
+.offers button{
+    color: #fff;
+    font-size: 12px;
+    background-color: #35a41b;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* ORDER SECTION */
+
+.order{
+    background: linear-gradient(0deg, #34650d, #37b722);
+}
+
+.order .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order_form{
+    width: 565px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 50px 30px;
+}
+
+.order_title{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.order_form form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.order_form input{
+    width: 30%;
+    border: 1px solid #35a41b;
+    border-radius: 30px;
+    padding: 15px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.order_form input[name="message"]{
+    width: 65%;
+}
+
+.order_form input[type="submit"]{
+    background-color: #35a41b;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.order_form p{
+    font-size: 18px;
+    color: #37a11d;
+    text-align: center;
+}
+
+.order_text{
+    width: 565px;
+    font-size: 28px;
+    color: #fff;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #292929;
+    padding: 60px 0;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+address{
+    color: #37a11d;
+    margin-bottom: 5px;
+}
+
+.tel img{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.tel a{
+    text-decoration: none;
+    color: #37a11d;
+}
+
+/* POPUP */
+
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/* ADAPTIVE */
+
+@media (max-width: 1150px){
+
+    header .container{
+        padding: 20px 10px;
+    }
+
+    .low_prices .container{
+        height: 780px;
+    }
+
+    .content{
+        justify-content: space-around;
+    }
+
+    .order .container{
+        flex-direction: column;
+    }
+
+    .order_text{
+        margin-top: 30px;
+    }
+
+    footer {
+        padding: 40px 10px;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    header .container{
+        flex-direction: column;
+    }
+
+    .menu{
+        margin-top: 20px;
+    }
+
+    .banner .container .buttons{
+        flex-direction: column;
+    }
+
+    .send_form{
+        margin-top: 20px;
+    }
+
+    .concurents{
+        align-items: center;
+    }
+
+    .links{
+        width: 80px;
+    }
+
+    .links a{
+        width: 63px;
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 670px){
+
+    h1{
+        width: 100%;
+        font-size: 35px;
+    }
+
+    .banner .container p{
+        text-align: center;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    section{
+        padding: 80px 10px;
+    }
+
+}
+
+@media (max-width: 590px){
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li{
+        margin-top: 10px;
+    }
+
+    .low_prices .container h2{
+        width: 100%;
+    }
+
+    .concurents{
+        padding: 5px 40px;
+    }
+
+    .links a img{
+        max-height: 50px;
+    }
+
+    .low_prices .container p{
+        text-align: center;
+    }
+
+    .order_form input{
+        width: 100%;
+    }
+
+    .order_form input[name="message"]{
+        width: 100%;
+    }
+
+    .order_form,
+    .order_text{
+        width: 100%;
+    }
+
+    footer .container{
+        flex-direction: column;
+    }
+
+    .contacts{
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .modal{
+        padding: 30px;
+    }
+
+    .modal .order_form{
+        padding: 5px 10px;
+    }
+
+    .modal .order_form form{
+        margin-bottom: 0;
+    }
+    
+    .modal .order_title{
+        margin-bottom: 15px;
+    }
+
+    .modal .order_form p{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 400px){
+
+    .banner .container .buttons button{
+        font-size: 18px;
+    }
+
+    .circle{
+        width: 300px;
+        height: 300px;
+        left: -7px;
+    }
+
+    .concurents span{
+        font-size: 45px;
+    }
+
+}
