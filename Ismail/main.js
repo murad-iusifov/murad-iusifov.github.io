@@ -1,5 +1,14 @@
 $(function(){
 
+    document.querySelectorAll('.book').forEach((book) => {
+
+        book.querySelectorAll('.item').forEach((el, i) => {
+
+            el.prepend(document.createElement('h3').innerText = ++i)
+
+        })
+    })
+
     $('.book .slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
