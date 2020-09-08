@@ -1,3 +1,167 @@
-<!doctype html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Alex Motzenbecker, Creative Developer</title><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="stylesheet" href="css/main.css"><script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga('create', 'UA-40453041-3', 'auto');
-            ga('send', 'pageview');</script><script async src="//www.google-analytics.com/analytics.js"></script></head><body><div id="content-scene"><div id="content"><div id="section-1" class="section"><div class="copy"><h3>For Designers:</h3><p>I care about design. Collaboration with designers is a big part of what I do. When starting a project, I'm happy to offer UX suggestions, create prototypes and advise on technology. In addition to a solid technology background, I have a strong understanding of layout, motion graphics, typography and user experience. I've taught programming for design at Parsons School of Design, The New School and SUNY New Paltz. I've worked on numerous projects that have been honored with awards from The Art Director's Club, Cannes Lions, FWA, and the Webby Awards.</p><h3>For Engineers:</h3><p>I am a full-stack web developer with a focus on front-end. I've worked both as a solo developer and as a lead developer, scaling up a team as needed. My recent projects have been built in React and Angular but I'm always open to new frameworks and believe that the technology should suit the project. I enjoy learning new languages, frameworks and technologies. In addition to the Web, I've written applications for Android, Arduino, Processing on XBox Kinect and custom art installations.</p></div><div class="photo"><img src="/img/about/alex-motzenbecker.jpg" width="100%" height="auto" alt="Alex Motzenbecker"></div></div><div id="section-2" class="section"><div class="work-content"><div class="title work-bg"></div><div class="info work-bg clearfix"><div class="left"><h3 class="client-label"></h3><p class="client-text"></p><h3 class="technology-label"></h3><p class="technology-text"></p></div><div class="right"><h3 class="description-label"></h3><p class="description-text"></p></div></div><div class="media work-bg"></div></div></div><div id="section-3" class="section"><nav><ul></ul></nav><div class="subsection"><div class="work-content"><div class="title work-bg"></div><div class="info work-bg clearfix"><div class="left"><h3 class="client-label"></h3><p class="client-text"></p><h3 class="technology-label"></h3><p class="technology-text"></p></div><div class="right"><h3 class="description-label"></h3><p class="description-text"></p></div></div><div class="media work-bg"></div></div></div></div><div id="section-4" class="section"><div id="contact-screen"><div class="logo-container"><img class="logo" src="/img/contact/contact-logo.png" width="220" height="120" alt="Alex Motzenbecker"></div><h2>Alex Motzenbecker</h2><hr><nav><ul><a href="callto:12122740822" target="_blank"><li><div class="bg"></div><div class="block"></div><span class="title">Phone</span> <span>212-274-0822</span></li></a> <a href="mailto:alex@mstudio.com" target="_blank"><li><div class="bg"></div><div class="block"></div><span class="title">Email</span> <span>alex@mstudio.com</span></li></a><li class="no-link"><div class="bg"></div><span class="title">Location</span> <span>NY, USA</span></li></ul></nav><hr></div></div><div id="section-5" class="section"><ul><li class="email"><div class="bg"></div><div class="block"></div><img src="/img/share/mobile-email.png" width="100" height="100"></li><li class="facebook"><div class="bg"></div><div class="block"></div><img src="/img/share/mobile-facebook.png" width="100" height="100"></li><li class="twitter"><div class="bg"></div><div class="block"></div><img src="/img/share/mobile-twitter.png" width="100" height="100"></li></ul></div></div></div><nav id="main-nav"><ul><li class="header s-0"><a href="/m/"><div class="block"></div><div class="text header"><span class="header">Alex Motzenbecker</span> <em>Creative&nbsp;Developer</em></div></a></li><li class="standard s-1"><a href="/m/about"><div class="block"></div><div class="text">About</div></a></li><li class="standard s-2"><a href="/m/work"><div class="block"></div><div class="text">Recent Work</div></a></li><li class="standard s-3"><a href="/m/clients"><div class="block"></div><div class="text">Clients</div></a></li><li class="standard s-4"><a href="/m/contact"><div class="block"></div><div class="text">Contact</div></a></li><li class="standard s-5"><a href="/m/share"><div class="block"></div><div class="text">Share</div></a></li></ul></nav><a href="/m/" id="hamburger-nav"><ul><li></li><li></li><li></li></ul></a> <a href="/m/clients/" id="clients-close"></a><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script><script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script><script src="js/main.js"></script></body>
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Murad Iusifov, Web Developer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l = +new Date;
+        ga('create', 'UA-40453041-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+</head>
+
+<body>
+    <div id="content-scene">
+        <div id="content">
+            <div id="section-1" class="section">
+                <div class="copy">
+                    <h3>Обо мне:</h3>
+                    <p>Приветствую Вас! Я Мурад, занимаюсь Web разработкой - созданием сайтов с нуля и любой сложности.
+                    Важнейшим аспектом в нашей профессии является любовь к своему занятию, интерес и смтремление к саморазвитию. 
+                    Иначе это занятие станет невыносимым, так как Web - отрасль меняющаяся и развивающаяся семимильными шагами. 
+                    Обратившись ко мне - Вы получите качественный продукт, разработанный наилучшим образом и соответствующий заключённому договору!</p>
+                    <h3>Для разработчиков:</h3>
+                    <p>Я full-stack web developer специализирующийся на front-end. Работаю большей частью как фрилансер. Уделяю особое внимание сотрудничеству 
+                    с дизайнерами, сео-специалистами и маркетологами. Всегда открыт для интересных предложений и обсуждению участия в проектах.</p>
+                </div>
+                <div class="photo">
+                    <img src="/img/about/murad-iusifov.jpg" width="100%" height="auto" alt="Murad Iusifov">
+                </div>
+            </div>
+            <div id="section-2" class="section">
+                <div class="work-content">
+                    <div class="title work-bg"></div>
+                    <div class="info work-bg clearfix">
+                        <div class="left">
+                            <h3 class="client-label"></h3>
+                            <p class="client-text"></p>
+                            <h3 class="technology-label"></h3>
+                            <p class="technology-text"></p>
+                        </div>
+                        <div class="right">
+                            <h3 class="description-label"></h3>
+                            <p class="description-text"></p>
+                        </div>
+                    </div>
+                    <div class="media work-bg"></div>
+                </div>
+            </div>
+            <div id="section-3" class="section">
+                <nav>
+                    <ul></ul>
+                </nav>
+                <div class="subsection">
+                    <div class="work-content">
+                        <div class="title work-bg"></div>
+                        <div class="info work-bg clearfix">
+                            <div class="left">
+                                <h3 class="client-label"></h3>
+                                <p class="client-text"></p>
+                                <h3 class="technology-label"></h3>
+                                <p class="technology-text"></p>
+                            </div>
+                            <div class="right">
+                                <h3 class="description-label"></h3>
+                                <p class="description-text"></p>
+                            </div>
+                        </div>
+                        <div class="media work-bg"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="section-4" class="section">
+                <div id="contact-screen">
+                    <div class="logo-container"><img class="logo" src="/img/contact/contact-logo.png" width="220"
+                            height="120" alt="Murad Iusifov"></div>
+                    <h2>Murad Iusifov</h2>
+                    <hr>
+                    <nav>
+                        <ul><a href="callto:+994558908062" target="_blank">
+                                <li>
+                                    <div class="bg"></div>
+                                    <div class="block"></div><span class="title">Phone</span> <span>+994(55)890-80-62</span>
+                                </li>
+                            </a> <a href="mailto:muradiusifov@gmail.com" target="_blank">
+                                <li>
+                                    <div class="bg"></div>
+                                    <div class="block"></div><span class="title">Email</span>
+                                    <span>muradiusifov@gmail.com</span>
+                                </li>
+                            </a>
+                            <li class="no-link">
+                                <div class="bg"></div><span class="title">Location</span> <span>Sumqait, AZE</span>
+                            </li>
+                        </ul>
+                    </nav>
+                    <hr>
+                </div>
+            </div>
+            <div id="section-5" class="section">
+                <ul>
+                    <li class="email">
+                        <div class="bg"></div>
+                        <div class="block"></div><img src="/img/share/mobile-email.png" width="100" height="100">
+                    </li>
+                    <li class="facebook">
+                        <div class="bg"></div>
+                        <div class="block"></div><img src="/img/share/mobile-facebook.png" width="100" height="100">
+                    </li>
+                    <li class="twitter">
+                        <div class="bg"></div>
+                        <div class="block"></div><img src="/img/share/mobile-twitter.png" width="100" height="100">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav id="main-nav">
+        <ul>
+            <li class="header s-0"><a href="/m/">
+                    <div class="block"></div>
+                    <div class="text header"><span class="header">Murad Iusifov</span>
+                        <em>Web&nbsp;Developer</em></div>
+                </a></li>
+            <li class="standard s-1"><a href="/m/about">
+                    <div class="block"></div>
+                    <div class="text">Обо мне</div>
+                </a></li>
+            <li class="standard s-2"><a href="/m/work">
+                    <div class="block"></div>
+                    <div class="text">Недавние работы</div>
+                </a></li>
+            <li class="standard s-3"><a href="/m/clients">
+                    <div class="block"></div>
+                    <div class="text">Клиенты</div>
+                </a></li>
+            <li class="standard s-4"><a href="/m/contact">
+                    <div class="block"></div>
+                    <div class="text">Контакты</div>
+                </a></li>
+            <li class="standard s-5"><a href="/m/share">
+                    <div class="block"></div>
+                    <div class="text">Поделиться</div>
+                </a></li>
+        </ul>
+    </nav><a href="/m/" id="hamburger-nav">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </a> <a href="/m/clients/" id="clients-close"></a>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+</body>

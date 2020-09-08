@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Murad Iusifov, Web Developer</title>
+    <title>Murad Iusifov, Wev Developer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -98,7 +98,7 @@
                                 </li>
                             </a>
                             <li class="no-link">
-                                <div class="bg"></div><span class="title">Location</span> <span>Sumqait, AZE</span>
+                                <div class="bg"></div><span class="title">Location</span> <span>NY, USA</span>
                             </li>
                         </ul>
                     </nav>
