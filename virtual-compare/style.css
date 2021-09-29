@@ -384,12 +384,6 @@
     background-color: #000;
 }
 
-.virtual_compare .slider .slider_arrow {
-    position: fixed;
-    top: 300px;
-    transform: unset;
-}
-
 .virtual_compare .slider .arrow_left {
     left: calc((100% - 1190px) / 2);
 }
@@ -780,6 +774,12 @@
     
     .virtual_compare .slider .arrow_right {
         right: 20px;
+    }
+
+    .virtual_compare .slider .slider_arrow {
+        position: fixed;
+        top: 230px;
+        transform: unset;
     }
 
 }
