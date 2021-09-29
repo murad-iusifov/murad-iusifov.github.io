@@ -774,6 +774,14 @@
         column-gap: 10px;
     }
 
+    .virtual_compare .slider .arrow_left {
+        left: 20px;
+    }
+    
+    .virtual_compare .slider .arrow_right {
+        right: 20px;
+    }
+
 }
 
 @media (max-width: 1100px) {
