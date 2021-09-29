@@ -37,6 +37,23 @@ $('.options_item h3').on('click', function() {
 
 let categoriesWidth = $(".virtual_compare .top_part .categories").width();
 
+/*let liArr = document.querySelectorAll('.virtual_compare .top_part .categories li');
+
+let liAllWidth = 0;
+
+function catWidth () {
+
+    liArr.forEach((li, index) => {
+
+        let i = index ++
+
+        liAllWidth += liArr[i].offsetWidth
+
+    })
+
+}*/
+
+
 function showCategoryArrows () {
     if ($('.virtual_compare .top_part .categories ul').width() > categoriesWidth) {
 
