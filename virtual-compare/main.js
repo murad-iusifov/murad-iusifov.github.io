@@ -75,7 +75,7 @@ showCategoryArrows();
 
 $(".virtual_compare .top_part .categories_wrap .arrow.right").on("click", function () {
 
-    $(".virtual_compare .top_part .categories").scrollLeft(categoriesWidth);
+    $(".virtual_compare .top_part .categories").scrollLeft(catWidth());
 
 });
 
