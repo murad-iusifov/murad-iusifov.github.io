@@ -37,11 +37,11 @@ $('.options_item h3').on('click', function() {
 
 let categoriesWidth = $(".virtual_compare .top_part .categories").width();
 
-/*let liArr = document.querySelectorAll('.virtual_compare .top_part .categories li');
+let liArr = document.querySelectorAll('.virtual_compare .top_part .categories li');
 
-let liAllWidth = 0;
+let  catWidth = function (liAllWidth) {
 
-function catWidth () {
+    liAllWidth = 0;
 
     liArr.forEach((li, index) => {
 
@@ -51,11 +51,14 @@ function catWidth () {
 
     })
 
-}*/
+    return liAllWidth;
+
+}
 
 
 function showCategoryArrows () {
-    if ($('.virtual_compare .top_part .categories ul').width() > categoriesWidth) {
+
+    if (catWidth() > categoriesWidth) {
 
         $(".virtual_compare .top_part .categories_wrap .arrow").addClass('visible');
     
@@ -65,6 +68,7 @@ function showCategoryArrows () {
         $(".virtual_compare .top_part .categories_wrap .arrow").removeClass('visible');
     
     }
+    
 }
 
 showCategoryArrows();
