@@ -70,30 +70,39 @@ $(function(){
     });
 
     // video
-    let startVideo = document.querySelector('.video_card .video_wrapper .player_btn');
-    let videoPlayer = document.querySelector('#video-player');
-    let video;
+    document.querySelectorAll('.video_card .video_wrapper .player_btn').forEach(startVideo => {
 
-    if (startVideo) {
-        startVideo.addEventListener('click', function () {
-            document.querySelector('.video_card .video_wrapper').classList.add("playing");
+        startVideo.addEventListener('click', function (e) {
+            e.stopPropagation()
+            startVideo.closest('.video_wrapper').classList.add("playing");
+            play(startVideo.previousElementSibling)
         });
-        startVideo.onclick = play;
-    }
 
-    if (videoPlayer) {
+    })
+
+    document.querySelectorAll('.video_card .video_wrapper').forEach(videoPlayer => {
+
+        let video = videoPlayer.querySelector('video')
+
         videoPlayer.addEventListener('click', function () {
-            document.querySelector('.video_card .video_wrapper').classList.remove("playing");
-        });
-        videoPlayer.onclick = pause;
-        video = videoPlayer;
-    }
 
-    function play() {
+            if(videoPlayer.classList.contains('playing')){
+                
+                videoPlayer.classList.remove("playing");
+
+                pause(video)
+
+            }
+            
+        });
+
+    })
+
+    function play(video) {
         video.play();
     }
 
-    function pause() {
+    function pause(video) {
         video.pause();
     }
 
