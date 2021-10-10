@@ -1538,6 +1538,28 @@ footer .menu ul li+li {
 
 }
 
+@media (max-width: 680px) {
+
+    .cards_section .card {
+        width: 100%;
+    }
+
+    footer .menu ul {
+        justify-content: flex-start;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .menu ul li a {
+        justify-content: flex-start;
+    }
+
+    footer .menu ul li, footer .menu ul li+li {
+        width: 50%;
+    }
+
+}
+
 @media (max-width: 510px) {
 
     .header_top .inner .tel {
