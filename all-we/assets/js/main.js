@@ -105,9 +105,17 @@ $(function(){
 
 
 
+    $('.collection_list .all').on('click', function(){
 
+        $(this).siblings('.inner').addClass('_show_all');
 
+    });
 
+    $('.filters_button').on('click', function(){
+
+        $('.catalog_page aside').toggleClass('open');
+
+    });
 
     // video
     document.querySelectorAll('.video_card .video_wrapper .player_btn').forEach(startVideo => {
