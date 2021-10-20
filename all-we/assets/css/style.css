@@ -567,6 +567,7 @@ main .container {
 
 aside {
     max-width: 446px;
+    width: 100%;
     height: fit-content;
     border: 1px solid var(--border-color);
     border-radius: 10px;
