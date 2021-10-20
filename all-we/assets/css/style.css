@@ -573,6 +573,10 @@ aside {
     padding: 40px 32px 32px;
 }
 
+aside._filter {
+    max-width: 350px;
+}
+
 h2 {
     position: relative;
     font-size: 18px;
@@ -882,6 +886,7 @@ aside .support_poject a {
 .cards_section .cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     column-gap: 30px;
     row-gap: 30px;
 }
@@ -1226,7 +1231,7 @@ h1 > div img {
 }
 
 .filters {
-    min-width: 382px;
+    /* min-width: 382px; */
     width: 100%;
 }
 
@@ -1268,9 +1273,14 @@ h1 > div img {
 }
 
 .filter .inner {
+    max-height: 160px;
+    overflow-y: hidden;
+    margin-bottom: 16px;
+}
+
+.filter .inner.open {
     max-height: 310px;
     overflow-y: auto;
-    margin-bottom: 16px;
 }
 
 .filter .inner::-webkit-scrollbar {
@@ -1329,12 +1339,17 @@ input:checked + .fake_checkbox span {
     font-weight: 400;
 }
 
-.filters .show_all {
+.filters .show_all,
+.filters .hide {
     width: fit-content;
     font-size: 14px;
     color: var(--main-color);
     border-bottom: 1px dashed var(--main-color);
     cursor: pointer;
+}
+
+.filters .hide {
+    display: none;
 }
 
 .filter .year {
