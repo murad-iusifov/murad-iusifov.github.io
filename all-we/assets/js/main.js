@@ -105,6 +105,7 @@ $(function(){
     $('.filter .show_all').on('click', function(){
 
         $(this).siblings('.inner').addClass('open');
+        $(this).siblings('.filter_search').addClass('open');
         $(this).siblings('.hide').css('display', 'block');
         $(this).css('display', 'none');
 
@@ -113,6 +114,7 @@ $(function(){
     $('.filter .hide').on('click', function(){
 
         $(this).siblings('.inner').removeClass('open');
+        $(this).siblings('.filter_search').removeClass('open');
         $(this).siblings('.show_all').css('display', 'block');
         $(this).css('display', 'none');
 
