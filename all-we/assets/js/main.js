@@ -1,6 +1,6 @@
 $(function(){
 
-    $('.slider').slick({
+    $('.s lider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: '<div class="slider_arrow arrow_left"><span></span></div>',
@@ -35,6 +35,14 @@ $(function(){
                 }
             }
         ]
+    });
+
+    $('.product_img .slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<div class="slider_arrow arrow_left"><i></i><i></i></div>',
+        nextArrow: '<div class="slider_arrow arrow_right"><i></i><i></i></div>',
+        infinite: true
     });
 
     $('.menu2 .catalog_btn').on('click', function(){
@@ -119,6 +127,22 @@ $(function(){
         $(this).css('display', 'none');
 
     });
+
+    /*function checkListHeight () {
+
+        document.querySelectorAll('.collection_list .inner').forEach((list) => {
+
+            if(list.offsetHeight < 60) {
+
+                list.siblings('.all').style.display = 'none';
+        
+            }
+
+        });
+    
+    }
+
+    checkListHeight();*/
 
 
     $('.collection_list .all').on('click', function(){
