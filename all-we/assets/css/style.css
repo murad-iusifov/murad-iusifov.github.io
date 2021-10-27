@@ -452,7 +452,7 @@ header .menu ul li:hover {
     align-items: center;
     width: 48px;
     height: 48px;
-    background-color: var(--bg-color);
+    background-color: var(--bg-theme);
     border-radius: 0px 10px 0px 0px;
     margin-left: 17px;
     cursor: pointer;

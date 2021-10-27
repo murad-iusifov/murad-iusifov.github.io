@@ -194,5 +194,82 @@ $(function(){
         video.pause();
     }
 
+    // cookie
+    let firstStyle = document.querySelector('style')
+
+    console.log(firstStyle.innerHTML)
+
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : null;
+    }
+
+    function setCookie(name, value, options = {}) {
+
+        options = {
+            path: '/',
+            // при необходимости добавьте другие значения по умолчанию
+            ...options
+        };
+
+        if (options.expires instanceof Date) {
+            options.expires = options.expires.toUTCString();
+        }
+
+        let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+        for (let optionKey in options) {
+            updatedCookie += "; " + optionKey;
+            let optionValue = options[optionKey];
+            if (optionValue !== true) {
+                updatedCookie += "=" + optionValue;
+            }
+        }
+
+        document.cookie = updatedCookie;
+    }
+
+    
+
+    function deleteCookie(name) {
+        setCookie(name, "", {
+            'max-age': -1
+        })
+    }
+
+    let themeBtn = document.querySelector('.theme')
+
+    if(themeBtn){
+
+        themeBtn.addEventListener('click', () => {
+
+            if(getCookie('themeSwitcher')){
+                deleteCookie('themeSwitcher')
+            }else{
+                setCookie('themeSwitcher', {'max-age': 3600 * 24 * 365})
+            }
+
+            location.reload();
+
+        })
+
+        if(getCookie('themeSwitcher')){
+
+            let styles = document.querySelectorAll('head style')
+
+            if(typeof styles[styles.length - 2] !== 'undefined' && typeof styles[styles.length - 1] !== 'undefined'){
+
+                styles[styles.length - 2].innerHTML = '/*' + styles[styles.length - 2].innerHTML + '*/';
+
+                styles[styles.length - 1].innerHTML = styles[styles.length - 1].innerHTML.replace(/\/\*/g, '')
+
+            }
+
+        }
+
+    }
+
 
 });
