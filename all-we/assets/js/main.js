@@ -265,6 +265,12 @@ $(function(){
 
                 styles[styles.length - 1].innerHTML = styles[styles.length - 1].innerHTML.replace(/\/\*/g, '')
 
+                $('.theme').on('click', function () {
+
+                    $(this).find('svg').toggle();
+            
+                });
+
             }
 
         }
