@@ -893,7 +893,7 @@ aside .support_poject a {
 
 .collectioner .raiting {
     font-style: normal;
-    color: var(--bg-color);
+    color: var(--bg-color_st);
     margin-left: 8px;
 }
 
@@ -901,8 +901,11 @@ aside .support_poject a {
     margin: 0 2px;
 }
 
-.raiting svg path {
+.raiting:not(.collectioner .raiting) svg path {
     fill: var(--raiting-svg);
+}
+.collectioner .raiting svg path {
+    fill: var(--bg-color_st);
 }
 
 .index_publication .title {

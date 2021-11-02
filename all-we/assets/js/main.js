@@ -229,6 +229,7 @@ $(function(){
         }
 
         document.cookie = updatedCookie;
+        
     }
 
     
@@ -265,13 +266,17 @@ $(function(){
 
                 styles[styles.length - 1].innerHTML = styles[styles.length - 1].innerHTML.replace(/\/\*/g, '')
 
-                $('.theme').on('click', function () {
-
-                    $(this).find('svg').toggle();
-            
-                });
-
             }
+
+            $(themeBtn).find('svg').eq(0).css('display', 'none');
+
+            $(themeBtn).find('svg').eq(1).css('display', 'block');
+
+        }else{
+
+            $(themeBtn).find('svg').eq(0).css('display', 'block');
+
+            $(themeBtn).find('svg').eq(1).css('display', 'none');
 
         }
 
