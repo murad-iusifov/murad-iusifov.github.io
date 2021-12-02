@@ -50,7 +50,7 @@ $(function(){
     });
 
     // гамбургер меню
-    $('.hamburger').on('click', function(){
+    $('header .hamburger').on('click', function(){
         $(this).toggleClass('active');
         $('header .menu').toggleClass('active');
     });
@@ -153,7 +153,75 @@ $(function(){
 
     $('.filters_button').on('click', function(){
 
-        $('.catalog_page aside').toggleClass('open');
+        $('aside._filter').toggleClass('open');
+
+    });
+
+    // SELECT
+    $('.select .visual_part').on('click', function () {
+        $(this).siblings('.list').slideToggle();
+    });
+      
+    $('.select .list a').on('click', function (e) {
+        e.preventDefault();
+        a = $(this).text();
+        $(this).closest('.select').find('.visual_part span').text(a)
+        $(this).parents('.list').slideToggle();
+    });
+
+    // Модалка
+    document.querySelectorAll("[data-btn]").forEach(item => {
+
+        item.addEventListener('click', function(){
+
+            document.body.style.overflow = "hidden";
+
+            let dataValue = this.getAttribute("data-btn");
+
+            let modal = document.querySelector('.' + dataValue)
+
+            modal.style.display = 'flex';
+
+        });
+
+    });
+
+    document.querySelectorAll('.modal').forEach(function(item){
+        
+        item.addEventListener('click', function(e){
+
+            if(e.target === this || e.target.classList.contains('close')){
+
+                document.body.style.overflow = "visible";
+                this.style.display = "none";
+
+            }
+
+        });
+        
+    });
+
+    // wrappers_page hamburger
+
+    $('.wrappers_page .blocks_wrapper:not(.open)').slideUp();
+
+    $('.series_wrapper .hamburger').on('click', function() {
+
+        $(this).toggleClass('active');
+
+        $(this).closest('.series_wrapper').find('.blocks_wrapper').slideToggle();
+
+    });
+
+    // wrappers-block toggle
+
+    $('.wrappers_block:not(.open) .cards').slideUp();
+
+    $('.wrappers_block .collapse').on('click', function() {
+
+        $(this).closest('.wrappers_block').toggleClass('open');
+
+        $(this).closest('.wrappers_block').find('.cards').slideToggle();
 
     });
 
