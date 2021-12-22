@@ -45,6 +45,108 @@ $(function(){
         infinite: true
     });
 
+    $('.user_slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        prevArrow: '<div class="slider_arrow arrow_left"><span></span><span></span></div>',
+        nextArrow: '<div class="slider_arrow arrow_right"><span></span><span></span></div>',
+        infinite: false,
+        responsive: [
+            {
+            breakpoint: 1800,
+            settings: {
+                slidesToShow: 4
+                }
+            },
+            {
+            breakpoint: 1630,
+            settings: {
+                slidesToShow: 3
+                }
+            },
+            {
+            breakpoint: 1330,
+            settings: {
+                slidesToShow: 2
+                }
+            },
+            {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3
+                }
+            },
+            {
+            breakpoint: 1050,
+            settings: {
+                slidesToShow: 2
+                }
+            },
+            {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 4
+                }
+            },
+            {
+            breakpoint: 830,
+            settings: {
+                slidesToShow: 3
+                }
+            },
+            {
+            breakpoint: 650,
+            settings: {
+                slidesToShow: 2
+                }
+            }
+        ]
+    });
+
+    // Switch blocks
+    document.querySelectorAll('[data-switch]').forEach(switchBtn => {
+
+        switchBtn.addEventListener('click', function(){
+            
+            document.querySelectorAll('[data-switch]').forEach(item => item.classList.remove("active"));
+    
+            document.querySelectorAll('[data-switched]').forEach(item => item.classList.remove("active"));
+    
+            let s = this.getAttribute("data-switch");
+    
+            this.classList.add("active");
+    
+            document.querySelector('[data-switched='+ s +']').classList.add("active");
+    
+        });
+    
+    });
+
+    //user subscribe button
+    $('.subscribe').on('click', function(){
+        $(this).toggleClass('subscribed');
+    });
+
+    // добавление публикации
+    $('.add_publication input').on('input', function () {
+        $(this).closest('form').find('.write_message').addClass('writing');
+    })
+
+    $('.add_publication [type="reset"]').on('click', function(){
+        $(this).closest('.write_message ').removeClass('writing');
+    });
+
+    // настройки публикации
+    $('.publication_redact .options_btn').on('click', function(){
+        $(this).closest('.publication_redact').find('.options').toggle();
+    });
+
+    // иконки под публикацей
+    $('.publication_infoPanel .element').on('click', function(){
+        $(this).toggleClass('choosed');
+    });
+
+    // menu2 - located in header.
     $('.menu2 .catalog_btn').on('click', function(){
         $('.menu2 ul').slideToggle();
     });
