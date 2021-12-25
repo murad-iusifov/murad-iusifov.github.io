@@ -405,6 +405,28 @@ main {
 [data-switched].active {
     display: block;
 }
+
+.switchTitles {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 15px;
+    margin: 32px 0;
+    padding: 0 32px;
+    cursor: pointer;
+}
+
+[data-switch] {
+    width: fit-content;
+    font-size: 16px;
+    color: var(--color2);
+    padding-bottom: 24px;
+}
+
+[data-switch].active {
+    color: var(--main-color);
+    border-bottom: 4px solid var(--bg-color_st);
+}
 /*     SWITCH BLOCKS     */
 
 
@@ -3070,6 +3092,7 @@ input:checked+.fake_radio span {
 
 .social_menu {
     max-width: 273px;
+    font-family: 'Raleway bold';
     font-size: 14px;
 }
 
@@ -3081,6 +3104,12 @@ input:checked+.fake_radio span {
     display: flex;
     align-items: center;
     column-gap: 14px;
+    transition: color 0.3s;
+}
+
+.social_menu li:hover a,
+.social_menu li.active a {
+    color: var(--bg-color_st);
 }
 
 .social_menu img {
@@ -3096,6 +3125,7 @@ input:checked+.fake_radio span {
     justify-content: center;
     width: 28px;
     height: 28px;
+    font-family: 'Raleway';
     border-radius: 50%;
     background-color: var(--border-color);
     line-height: 1;
@@ -3713,7 +3743,7 @@ input:checked+.fake_radio span {
     font-family: 'Raleway medium';
 }
 
-.publications_feed .switchTitles {
+/* .publications_feed .switchTitles {
     display: flex;
     column-gap: 40px;
     margin: 32px 0;
@@ -3730,7 +3760,7 @@ input:checked+.fake_radio span {
 .publications_feed [data-switch].active {
     color: var(--main-color);
     border-bottom: 4px solid var(--bg-color_st);
-}
+} */
 
 .publications_feed .block_inner {
     display: flex;
@@ -4307,6 +4337,373 @@ form.profile_redact .btns button {
     fill: var(--main-color);
 }
 
+.forum .page_body {
+    width: 100%;
+    font-family: 'Raleway medium';
+}
+
+.forum .border_wrapper {
+    padding: 32px 0;
+}
+
+.forum .deal {
+    margin-top: 32px;
+}
+
+.forum .deal .top {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 10px;
+    color: var(--color2);
+    background-color: var(--bg-color3);
+    padding: 5px 32px;
+    margin-bottom: 32px;
+}
+
+.forum .deal .title {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    font-size: 18px;
+}
+
+.forum .deal .title span {
+    font-family: 'Raleway bold';
+    color: var(--main-color);
+}
+
+.forum .deal .part1 {
+    min-width: 300px;
+}
+
+.forum .deal .part2 {
+    min-width: 200px;
+}
+
+.forum .deal .part3 {
+    min-width: 140px;
+}
+
+.forum .deal .part4 {
+    flex-grow: 1;
+}
+
+.forum .add {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.forum .add span {
+    border-bottom: 1px dashed var(--main-color);
+    padding-bottom: 1px;
+    transition: border-bottom 0.3s;
+}
+
+.forum .add line {
+    stroke: var(--main-color);
+    transition: stroke 0.3s;
+}
+
+.forum .add:hover {
+    color: var(--bg-color_st);
+}
+
+.forum .add:hover span {
+    border-bottom: 1px dashed var(--bg-color_st);
+}
+
+.forum .add:hover line {
+    stroke: var(--bg-color_st);
+}
+
+.forum .deal li {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 20px;
+    padding: 20px 32px;
+}
+
+.forum .deal li .part {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+}
+
+.forum .deal .mob_title {
+    display: none;
+    color: var(--color2);
+}
+
+.forum .deal li .part4 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.forum .deal li .part4 a {
+    font-family: 'Raleway bold';
+    font-size: 18px;
+}
+
+.forum .deal li .part4 div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+}
+
+.forum .deal li .part4 span {
+    color: var(--color2);
+}
+
+.forum_inner .page_body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.forum_inner .border_wrapper {
+    padding: 0;
+}
+
+.forum_theme .theme_top {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    background-color: var(--bg-color3);
+    padding-right: 32px;
+}
+
+.forum_theme .back_btn {
+    align-self: stretch;
+}
+
+.forum_theme .back_btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    min-height: 78px;
+    height: 100%;
+    border-right: 1px solid var(--border-color);
+}
+
+.forum_theme .back_btn path {
+    fill: var(--main-color);
+    transition: fill 0.3s;
+}
+
+.forum_theme .back_btn:hover path {
+    fill: var(--bg-color_st);
+}
+
+.forum_theme h1 {
+    font-size: 18px;
+    line-height: 120%;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.forum_theme .theme_top .add {
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+.forum_theme .publication .top {
+    margin: 0;
+}
+
+.forum_theme .publication .comments {
+    margin-top: 0;
+}
+
+.forum_theme .publication .comments > .comment {
+    padding: 32px;
+}
+
+.publication_redact .online_status {
+    font-size: 14px;
+    color: var(--color2);
+}
+
+.forum_theme .publication_redact .options_btn {
+    justify-content: flex-end;
+}
+
+.forum_theme .publication_redact .options_btn i {
+    background-color: var(--border-color);
+    transition: background-color 0.3s;
+}
+
+.forum_theme .publication_redact:hover .options_btn i {
+    background-color: var(--main-color);
+}
+
+.forum_theme .comment .commentator_info {
+    display: flex;
+    font-size: 14px;
+} 
+
+.forum_theme .comment .commentator_info .commentaries {
+    position: relative;
+    margin-left: 25px;
+}
+
+.forum_theme .comment .commentator_info .commentaries::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    transform: translateY(-47%);
+}
+
+.forum_theme .comment .commentator_info span {
+    color: var(--color2);
+    margin-left: 3px;
+}
+
+.forum_answer {
+    background-color: var(--bg-color3);
+    padding: 32px 30px;
+    border-radius: 10px;
+}
+
+.forum_answer .messager {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 16px;
+}
+
+.forum_answer .messager span {
+    color: var(--color2);
+    margin-left: 5px;
+}
+
+.forum_answer .answer_content {
+    line-height: 140%;
+    margin-top: 20px;
+}
+
+.forum_inner .add_publication {
+    padding: 32px;
+}
+
+.modal.complain {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Raleway medium';
+}
+
+.modal.complain .modal_wrap {
+    position: relative;
+    max-width: 400px;
+    padding: 48px 32px 32px;
+}
+
+.modal.complain .user_name {
+    color: var(--color2);
+    margin: 0 3px;
+}
+
+.modal.complain [type="radio"] {
+    display: none;
+}
+
+.modal.complain .cause {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    color: var(--color2);
+    margin: 30px 0;
+}
+
+.modal.complain .fake_radio {
+    border-color: var(--main-color);
+}
+
+.modal.complain input:checked + .fake_radio {
+    border-color: var(--bg-color_st);
+}
+
+.modal.complain label {
+    display: flex;
+    align-items: center;
+}
+
+.modal.complain h4 {
+    margin: 0;
+    transition: color 0.3s;
+}
+
+.modal.complain input:checked ~ h4 {
+    color: var(--main-color);
+}
+
+.modal.complain h5 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.modal.complain textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid var(--color2);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.forum .not_authorized {
+    max-width: 280px;
+    color: var(--color2);
+    line-height: 140%;
+    margin-bottom: 30px;
+}
+
+.forum .not_authorized h3 {
+    font-size: 18px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4342,6 +4739,18 @@ form.profile_redact .btns button {
 
     .product_infoPanel {
         margin: 48px 0 48px 50px;
+    }
+
+    .forum .deal .part2 {
+        min-width: 140px;
+    }
+
+    .forum .deal .part3 {
+        min-width: 100px;
+    }
+
+    .forum .deal .part1 {
+        min-width: 200px;
     }
 
 }
@@ -4444,6 +4853,10 @@ form.profile_redact .btns button {
 
     .services_card {
         width: calc(25% - 23px);
+    }
+
+    .forum .side_bar {
+        min-width: 320px;
     }
 
 }
@@ -4890,6 +5303,58 @@ form.profile_redact .btns button {
         width: 250px;
         row-gap: 20px;
     }
+    
+    .forum_theme .theme_top {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .forum_theme h1 {
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        text-align: center;
+        border-top: 1px solid var(--border-color);
+        padding: 25px 20px;
+    }
+
+    .forum_theme .theme_top .add {
+        order: 1;
+    }
+
+    .forum_theme .theme_top .pagination {
+        order: 3;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0 10px 30px;
+    }
+
+    .forum_theme .theme_top .pagination ul {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .forum .deal .mob_title {
+        display: block;
+    }
+
+    .forum .deal .top {
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+
+    .forum .deal .top .part2,
+    .forum .deal .top .part3,
+    .forum .deal .top .part4 {
+        display: none;
+    }
+
+    .forum .deal li {
+        flex-direction: column;
+    }
 
 }
 
@@ -5184,6 +5649,14 @@ form.profile_redact .btns button {
         padding: 20px 10px;
     }
 
+    .forum_inner .page_body .border_wrapper {
+        padding: 0;
+    }
+
+    .forum_inner .add_publication {
+        padding: 20px 10px;
+    }
+
     .profile .narrow_column,
     .user .side_bar {
         min-width: unset;
@@ -5193,7 +5666,14 @@ form.profile_redact .btns button {
         height: 90vw;
     }
 
-    .publications_feed .switchTitles {
+    /* .publications_feed .switchTitles {
+        flex-direction: column;
+        row-gap: 15px;
+        margin: 32px 0;
+        padding: 0;
+    } */
+
+    .switchTitles {
         flex-direction: column;
         row-gap: 15px;
         margin: 32px 0;
@@ -5241,6 +5721,26 @@ form.profile_redact .btns button {
 
     .user_gallery .slider_wrap {
         display: none;
+    }
+
+    .forum_theme .publication .comments > .comment {
+        padding: 20px 10px;
+    }
+
+    .forum_answer,
+    .forum_theme h1 {
+        padding: 20px;
+    }
+
+    .forum_theme .back_btn a {
+        width: 60px;
+        height: 60px;
+        min-height: 60px;
+    }
+
+    .forum .deal .top {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
 }
@@ -5325,6 +5825,12 @@ form.profile_redact .btns button {
     .qroup_wrapper .narrow_column {
         min-width: unset;
         width: 100%;
+    }
+
+    .modal.complain .modal_wrap {
+        position: relative;
+        max-width: 400px;
+        padding: 48px 20px 20px;
     }
 
 }
