@@ -107,10 +107,16 @@ $(function(){
     document.querySelectorAll('[data-switch]').forEach(switchBtn => {
 
         switchBtn.addEventListener('click', function(){
+
+            [...this.closest('.switchTitles').children].forEach(item => item.classList.remove("active"));
             
-            document.querySelectorAll('[data-switch]').forEach(item => item.classList.remove("active"));
+            //document.querySelectorAll('[data-switch]').forEach(item => item.classList.remove("active"));
+
+            [...this.closest('.switchTitles').parentElement.children].forEach(item => item.classList.remove("active"));
+
+            //this.closest('.switchTitle').parentElenent.children.forEach(item => item.classList.remove("active"));
     
-            document.querySelectorAll('[data-switched]').forEach(item => item.classList.remove("active"));
+            //document.querySelectorAll('[data-switched]').forEach(item => item.classList.remove("active"));
     
             let s = this.getAttribute("data-switch");
     

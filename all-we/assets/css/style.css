@@ -406,6 +406,14 @@ main {
     display: block;
 }
 
+[data-innerSwitched] {
+    display: none;
+}
+
+[data-innerSwitched].active {
+    display: block;
+}
+
 .switchTitles {
     display: flex;
     flex-wrap: wrap;
@@ -1962,6 +1970,24 @@ input:checked+.fake_radio span {
     padding: 40px 32px;
 }
 
+.catalog_card2.with_list ul {
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+.catalog_card2.with_list ul::-webkit-scrollbar {
+    width: 4px;
+}
+
+.catalog_card2.with_list ul::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+}
+
+.catalog_card2.with_list ul::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-right: 1px solid var(--border-color);
+}
+
 .add_collection {
     display: flex;
     justify-content: flex-end;
@@ -1969,7 +1995,8 @@ input:checked+.fake_radio span {
 }
 
 
-.add_collection button {
+.add_collection button,
+.big_btn {
     min-width: 306px;
     font-size: 16px;
     text-align: center;
@@ -3065,6 +3092,7 @@ input:checked+.fake_radio span {
 .social .container {
     display: flex;
     align-items: flex-start;
+    font-family: 'Raleway medium';
 }
 
 .side_bar {
@@ -4466,7 +4494,8 @@ form.profile_redact .btns button {
     row-gap: 32px;
 }
 
-.forum_inner .border_wrapper {
+.forum_inner .border_wrapper,
+.exchanger_collection .border_wrapper {
     padding: 0;
 }
 
@@ -4475,6 +4504,7 @@ form.profile_redact .btns button {
     align-items: center;
     column-gap: 32px;
     background-color: var(--bg-color3);
+    border-radius: 10px 10px 0 0;
     padding-right: 32px;
 }
 
@@ -4492,12 +4522,14 @@ form.profile_redact .btns button {
     border-right: 1px solid var(--border-color);
 }
 
-.forum_theme .back_btn path {
+.forum_theme .back_btn path,
+.exchanger_collection .back_btn path {
     fill: var(--main-color);
     transition: fill 0.3s;
 }
 
-.forum_theme .back_btn:hover path {
+.forum_theme .back_btn:hover path,
+.exchanger_collection .back_btn:hover path {
     fill: var(--bg-color_st);
 }
 
@@ -4597,27 +4629,27 @@ form.profile_redact .btns button {
     padding: 32px;
 }
 
-.modal.complain {
+.modal.social_modal {
     background-color: rgba(0, 0, 0, 0.7);
     font-family: 'Raleway medium';
 }
 
-.modal.complain .modal_wrap {
+.modal.social_modal .modal_wrap {
     position: relative;
     max-width: 400px;
     padding: 48px 32px 32px;
 }
 
-.modal.complain .user_name {
+.modal.social_modal .user_name {
     color: var(--color2);
     margin: 0 3px;
 }
 
-.modal.complain [type="radio"] {
+.modal.social_modal [type="radio"] {
     display: none;
 }
 
-.modal.complain .cause {
+.modal.social_modal .cause {
     display: flex;
     flex-direction: column;
     row-gap: 12px;
@@ -4625,34 +4657,34 @@ form.profile_redact .btns button {
     margin: 30px 0;
 }
 
-.modal.complain .fake_radio {
+.modal.social_modal .fake_radio {
     border-color: var(--main-color);
 }
 
-.modal.complain input:checked + .fake_radio {
+.modal.social_modal input:checked + .fake_radio {
     border-color: var(--bg-color_st);
 }
 
-.modal.complain label {
+.modal.social_modal label {
     display: flex;
     align-items: center;
 }
 
-.modal.complain h4 {
+.modal.social_modal h4 {
     margin: 0;
     transition: color 0.3s;
 }
 
-.modal.complain input:checked ~ h4 {
+.modal.social_modal input:checked ~ h4 {
     color: var(--main-color);
 }
 
-.modal.complain h5 {
+.modal.social_modal h5 {
     font-size: 14px;
     padding-bottom: 20px;
 }
 
-.modal.complain textarea {
+.modal.social_modal textarea {
     width: 100%;
     min-height: 100px;
     resize: none;
@@ -4676,6 +4708,244 @@ form.profile_redact .btns button {
     color: var(--main-color);
     margin-bottom: 20px;
 }
+
+.exchanger .switchMain {
+    margin: 0 0 24px;
+}
+
+.exchanger .switchMain [data-switch] {
+    font-family: 'Raleway bold';
+    font-size: 24px;
+}
+
+.exchanger .switchMain [data-switch].active {
+    border: none;
+}
+
+
+
+.exchanger_collection .side_bar {
+    min-width: 345px;
+}
+
+.exchanger_collection .theme_top {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    background-color: var(--bg-color3);
+    border-radius: 10px 10px 0 0;
+    padding-right: 32px;
+    margin-bottom: 48px;
+}
+
+.exchanger_collection .theme_top .back_btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    min-height: 78px;
+    height: 100%;
+    border-right: 1px solid var(--border-color);
+}
+
+.exchanger_collection h1 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.exchanger_collection .inner_wrapper {
+    padding: 0 32px 32px;
+}
+
+.exchanger_collection .inner_wrapper .btns {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.exchanger_collection .big_btn.redact {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.exchanger_collection .series {
+    padding: 32px 0;
+}
+
+.exchanger_collection .series h3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.exchanger_collection .series h3 a {
+    font-family: 'Raleway medium';
+    font-weight: 500;
+    font-size: 14px;
+    border-bottom: 1px dashed var(--main-color);
+}
+
+.exchanger_collection .cards {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 32px;
+}
+
+.exchanger_card {
+    width: 146px;
+}
+
+.exchanger_card .img {
+    position: relative;
+    width: 146px;
+    height: 113px;
+    background-image: url(../../img/camera.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.exchanger_card h4 {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.exchanger_card p {
+    font-size: 12px;
+    color: var(--color2);
+    line-height: 120%;
+    margin-top: 14px;
+}
+
+.exchanger_card .redact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25272eda;
+    border: 3px solid var(--color2);
+    border-radius: 7px;
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.exchanger_card .redact .close {
+    top: 3px;
+    right: 1px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+}
+
+.exchanger_card .redact a {
+    font-size: 14px;
+    border-bottom: 1px dashed var(--main-color)
+}
+
+.exchanger_card .img:hover .redact {
+    visibility: visible;
+    opacity: 1;
+}
+
+.exchanger_modal .modal_wrap {
+    width: 400px;
+}
+
+.modal.social_modal.exchanger_modal textarea {
+    margin-bottom: 8px;
+}
+
+.exchanger_modal .attention {
+    font-size: 12px;
+    color: var(--color2);
+    margin-bottom: 24px;
+}
+
+.exchanger_modal .photo {
+    display: flex;
+    column-gap: 12px;
+    margin-bottom: 24px;
+}
+
+.exchanger_modal .photo > div {
+    width: 110px;
+    height: 110px;
+    border-radius: 3px;
+    border: 1px solid var(--color2);
+}
+
+.exchanger_modal .photo .img {
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.exchanger_modal .photo .add_photo label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.exchanger_modal .photo .add_photo input {
+    display: none;
+}
+
+.exchanger_modal .photo .add_photo span {
+    font-size: 14px;
+    border-bottom: 1px dashed var(--main-color);
+}
+
+.cause .cause_title {
+    font-size: 14px;
+    color: var(--main-color);
+    font-family: 'Raleway bold';
+    margin-bottom: 4px;
+}
+
+.cause .catalogCat_color {
+    margin: 0 8px 1px 0;
+}
+
+.exchanger_modal .cause h4 {
+    font-family: 'Raleway medium';
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5356,6 +5626,10 @@ form.profile_redact .btns button {
         flex-direction: column;
     }
 
+    .exchanger .switchMain {
+        margin: 30px 0 24px;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -5743,6 +6017,32 @@ form.profile_redact .btns button {
         align-items: flex-start;
     }
 
+    .big_btn {
+        width: 100%;
+        min-width: unset;
+        padding: 20px 30px;
+    }
+
+    .exchanger_collection .side_bar {
+        min-width: unset;
+    }
+
+    .exchanger_collection .border_wrapper {
+        padding: 0;
+    }
+
+    .exchanger_collection .inner_wrapper {
+        padding: 0 10px 10px;
+    }
+
+    .exchanger .catalog_card2 {
+        width: 100%;
+    }
+
+    .exchanger .catalog_card2 h4 {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -5827,10 +6127,18 @@ form.profile_redact .btns button {
         width: 100%;
     }
 
-    .modal.complain .modal_wrap {
+    .modal.social_modal .modal_wrap {
         position: relative;
         max-width: 400px;
         padding: 48px 20px 20px;
+    }
+
+    .exchanger_collection .cards {
+        justify-content: space-around;
+    }
+
+    .exchanger .pagination li {
+        width: 100%;
     }
 
 }
