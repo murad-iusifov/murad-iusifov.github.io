@@ -128,6 +128,12 @@ $(function(){
     
     });
 
+    // меню профиля
+    $('.profile_link .user_info').on('click', function(){
+        $(this).siblings('.profile_menu').toggle();
+    });
+
+
     //user subscribe button
     $('.subscribe').on('click', function(){
         $(this).toggleClass('subscribed');
