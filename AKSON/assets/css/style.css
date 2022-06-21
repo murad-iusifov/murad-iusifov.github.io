@@ -629,7 +629,7 @@ header .container {
 .search_form input {
     color: #fff;
     background-color: transparent;
-    border: none;
+    border: none !important;
     font-size: 16px;
     padding: 9px 32px;
     width: 100%;
