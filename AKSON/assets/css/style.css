@@ -1234,25 +1234,22 @@ form label.filled input {
 }
 
 .why_we .card {
+    display: flex;
+    column-gap: 20px;
     max-width: 432px;
 }
 
 .why_we .card .title {
-    position: relative;
-    min-height: 150px;
     display: flex;
     align-items: center;
-    z-index: 1;
+    margin-bottom: 15px;
 }
 
 .why_we .card .count {
-    position: absolute;
-    font-family: 'Roboto-bold';
-    font-weight: 900;
-    font-size: 128px;
-    line-height: 150px;
-    color: rgba(83, 125, 198, 0.16);
-    z-index: -1;
+    font-family: 'IBMPlexSans-medium';
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--second-color);
 }
 
 .why_we .card .title h4 {
@@ -1294,7 +1291,7 @@ form label.filled input {
     column-gap: 15px;
     width: 100%;
     height: 100%;
-    background-color: var(--second-color);
+    background-color: rgba(83, 125, 198, 0.65);
     box-shadow: 0px 4px 16px rgba(113, 113, 113, 0.25);
     border-radius: 5px;
     z-index: -1;
@@ -2243,6 +2240,9 @@ footer address {
     }
 
     .why_we .card {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
         text-align: center;
     }
 
