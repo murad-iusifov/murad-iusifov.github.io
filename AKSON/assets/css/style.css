@@ -686,6 +686,7 @@ address {
 }
 
 .index_slider {
+    align-items: flex-start;
     margin-left: calc((100vw - 1620px) / 2);
     margin-top: 0;
     padding-left: 10px;
@@ -693,6 +694,7 @@ address {
 
 .index_slider .slider {
     max-width: 57%;
+    padding-top: 48px;
     padding-bottom: 111px;
 }
 
