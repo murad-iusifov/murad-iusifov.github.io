@@ -1553,21 +1553,15 @@ form label.filled input {
     background-color: #fff;
 }
 
-.video_reviews .section_content {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 8px;
-    row-gap: 8px;
-}
-
 .video_reviews .video {
     position: relative;
     width: 389px;
     height: 371px;
     background: linear-gradient(89.3deg, #82A1D5 0.59%, #82A1D5 0.6%, rgba(130, 161, 213, 0) 99.39%);
-    filter: drop-shadow(0px 4px 16px rgba(113, 113, 113, 0.25));
+    /* filter: drop-shadow(0px 4px 16px rgba(113, 113, 113, 0.25)); */
     z-index: 1;
     padding: 24px 17px;
+    border-radius: 10px;
 }
 
 .video_reviews .video h3 {
@@ -1616,6 +1610,8 @@ form label.filled input {
     width: 100%;
     height: 100%;
     z-index: -1;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .video_reviews .video .img img {
@@ -2336,6 +2332,10 @@ footer address {
 }
 
 @media (max-width: 660px) {
+
+    .video_reviews .item {
+        justify-content: center;
+    }
 
     .slider_section .section_content {
         max-width: auto;

@@ -115,6 +115,42 @@ $(function () {
         }]
     });
 
+    $('.video_reviews .slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: '<div class="slider_arrow arrow_left"><span></span></div>',
+        nextArrow: '<div class="slider_arrow arrow_right"><span></span></div>',
+        infinite: true,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [{
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 660,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 440,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
     $('.why_we .card').each(function (index) {
         $(this).find('.count').text(index + 1);
     });
