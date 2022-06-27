@@ -693,13 +693,24 @@ address {
 }
 
 .index_slider .slider {
-    max-width: 57%;
-    padding-top: 48px;
+    max-width: 54%;
+    padding-top: 70px;
     padding-bottom: 111px;
 }
 
 .index_slider .item {
     display: block;
+}
+
+.index_slider .slick-dots li {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+}
+
+.index_slider .slick-dots li button {
+    display: inline-block;
+    opacity: 1;
 }
 
 .index_slider .slider .slider_arrow {
@@ -717,7 +728,7 @@ address {
 }
 
 .index_slider .slick-dots {
-    top: 0;
+    top: -320px;
     left: -80px;
     transform: unset;
     flex-direction: column;
