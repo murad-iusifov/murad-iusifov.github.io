@@ -487,18 +487,19 @@ section.bg {
 header .container {
     column-gap: 30px;
     justify-content: space-between;
+    column-gap: 90px;
     padding: 14px 10px 20px;
 }
 
 .menu>ul {
     font-family: 'IBMPlexSans-medium';
     flex-wrap: wrap;
-    justify-content: flex-end;
     column-gap: 40px;
+    row-gap: 22px;
 }
 
 .menu a {
-    font-size: 18px;
+    font-size: 16px;
     color: #003875;
 }
 
@@ -539,6 +540,10 @@ header .container {
     background-color: var(--second-color);
     transform: rotate(30deg);
     transform-origin: right;
+}
+
+.menu>ul>li:hover > a {
+    color: var(--second-color);
 }
 
 .menu>ul>li:hover .drop_sign {
