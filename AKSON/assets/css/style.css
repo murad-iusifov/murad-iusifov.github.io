@@ -618,6 +618,13 @@ header .container {
     justify-content: space-between;
 }
 
+.header_bottom .inner {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 25px;
+}
+
 .header_bottom a {
     color: #fff;
 }
@@ -664,10 +671,6 @@ header .container {
 .header_bottom ul a {
     text-decoration: underline;
     text-align: center;
-}
-
-.header_bottom .network {
-    margin: 0 auto;
 }
 
 .network {
@@ -2052,12 +2055,15 @@ footer address {
         margin-bottom: 15px;
     }
 
-    header .menu a {
+    header .menu a,
+    .menu>ul>li:hover > a {
         color: #fff;
     }
 
-    .header_bottom .container {
+    .header_bottom .container,
+    .header_bottom .inner {
         flex-direction: column;
+        row-gap: 0;
     }
 
     .menu>ul>li .drop_sign::before,
