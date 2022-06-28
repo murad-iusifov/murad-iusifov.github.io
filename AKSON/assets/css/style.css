@@ -636,6 +636,7 @@ header .container {
     background: rgba(255, 255, 255, 0.43);
     border-radius: 20px;
     padding-right: 22px;
+    margin-bottom: auto;
 }
 
 .search_form input {
