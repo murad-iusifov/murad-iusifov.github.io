@@ -298,6 +298,13 @@ $(function () {
         $('header .calc ul').slideToggle();
     });
 
+    $(document).mouseup(function (e) {
+        var calcDiv = $('header .calc');
+        if (calcDiv.has(e.target).length === 0){
+            $('header .calc ul').slideUp();
+        }
+    });
+
     //faq card
     $('.faq_card .icon').on('click', function () {
         if ($(this).closest('.faq_card').hasClass('open')) {
@@ -319,7 +326,7 @@ $(function () {
         $('.overlay').fadeOut();
     });
 
-    $(document).on("click", '.free-measurement', function () {
+    $(document).on("click", '.free-measurement, .order_steps .order_meauser', function () {
         popup('measurement');
     });
 
@@ -355,7 +362,7 @@ $(function () {
         popup('sendingInfo');
     });
 
-    $(document).on("click", '.windows_price .card .btn, .comparison .btn, .plastic_doors .card .btn, .doors_card .btn, .loggia_balconies .card .btnWhite', function (e) {
+    $(document).on("click", '.windows_price .card .btn, .comparison .btn, .plastic_doors .card .btn, .doors_card .btn, .loggia_balconies .card .btnWhite, .exactlyСalcbtn', function (e) {
         e.preventDefault();
         popup('exactlyСalc');
     });
