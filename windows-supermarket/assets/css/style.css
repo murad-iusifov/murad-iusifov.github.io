@@ -4203,6 +4203,10 @@ h3 {
     margin-left: auto;
 }
 
+.alumin2 .for_download {
+    margin-bottom: 140px;
+}
+
 .сalculator .top {
     display: flex;
     justify-content: space-between;
@@ -5723,6 +5727,10 @@ input:checked+.fake_checkbox svg {
 }
 
 @media (max-width: 540px) {
+
+    .alumin2 .for_download {
+        margin-bottom: 70px;
+    }
 
     .alumin2 .banner h2 {
         font-size: 34px;
