@@ -326,7 +326,7 @@ $(function () {
         $('.overlay').fadeOut();
     });
 
-    $(document).on("click", '.free-measurement, .order_steps .order_meauser', function () {
+    $(document).on("click", '.free-measurement, .order_steps .order_meauser, .measurementBtn', function () {
         popup('measurement');
     });
 
@@ -366,19 +366,6 @@ $(function () {
         e.preventDefault();
         popup('exactlyСalc');
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     $(document).on("click", '.text-register span', function () {
         popup('register');
@@ -471,6 +458,15 @@ $(function () {
         a = $(this).text();
         $(this).closest('.select').find('.visual_part span').text(a)
         $(this).parents('.list').slideToggle();
+    });
+
+    // плавный якорь на странице alumin-2.html
+    var $page = $('html, body');
+    $('.alumin2 .alumin_systems .card .btn_wrap .btnWhite').click(function() {
+        $page.animate({
+            scrollTop: $('.alumin2 .for_download').offset().top - 300
+        }, 800);
+        return false;
     });
 
 
