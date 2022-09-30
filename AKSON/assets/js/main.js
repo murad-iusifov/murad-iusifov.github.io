@@ -151,6 +151,55 @@ $(function () {
         ]
     });
 
+    $('.catalog .by_type .slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        prevArrow: '<div class="slider_arrow arrow_left"><span></span></div>',
+        nextArrow: '<div class="slider_arrow arrow_right"><span></span></div>',
+        infinite: true,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [{
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 880,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $('.contacts_banner .slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        infinite: true,
+        dots: false,
+        fade: true,
+        cssEase: 'linear',
+        speed: 600,
+        autoplay: true,
+        autoplaySpeed: 5000
+    });
+
     $('.why_we .card').each(function (index) {
         $(this).find('.count').text(index + 1);
     });
@@ -207,6 +256,11 @@ $(function () {
         $('.overlay').fadeOut();
     });
 
+    $(document).on("click", '.ceiling_cost._withPopup .aksBtn2', function (e) {
+        e.preventDefault();
+        popup('ceilingCost');
+    });
+
     $(document).on("click", '.clients_reviews .card', function (e) {
         e.preventDefault();
         var identificator = $(this).attr('data-reviewdId');
@@ -222,6 +276,41 @@ $(function () {
         });
     });
 
+    // Кнопка скролла вверх
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 400) {
+            $('.goToTop_btn').fadeIn();
+        } else {
+            $('.goToTop_btn').fadeOut();
+        }
+    });
+
+    $('.goToTop_btn').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
+    // contacts page
+    $('.contacts .requisites').on('click', function() {
+        $('.contacts_title i').toggleClass('open');
+        $('.requisites ul').slideToggle();
+    });
+
+    // select
+    $('.select .visual_part').on('click', function () {
+        $(this).siblings('.list').slideToggle();
+        $(this).toggleClass('opened');
+    });
+    
+    $('.select .list a').on('click', function (e) {
+        e.preventDefault();
+        a = $(this).text();
+        $(this).closest('.select').find('.visual_part span').text(a)
+        $(this).parents('.list').slideToggle();
+    });
 
 
 });
