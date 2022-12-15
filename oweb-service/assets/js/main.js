@@ -1,0 +1,143 @@
+$(function () {
+
+    $('.slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<div class="slider_arrow arrow_left"><span></span></div>',
+        nextArrow: '<div class="slider_arrow arrow_right"><span></span></div>',
+        infinite: true,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 1281,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 510,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    // select
+    $('.select .visual_part').on('click', function () {
+        $(this).toggleClass('active');
+        $('.select .list').slideToggle();
+    });
+
+    $('.select .list a').on('click', function (e) {
+        e.preventDefault();
+        a = $(this).text();
+        $(this).closest('.select').find('.visual_part span').text(a)
+        $(this).parents('.list').slideToggle();
+    });
+
+    //attention close
+
+    $('.attention .close').on('click', function() {
+        $(this).closest('.attention').css('display', 'none');
+    })
+
+    // гамбургер меню
+    $('.hamburger').on('click', function () {
+        $(this).toggleClass('active');
+        $('header .menu').toggleClass('active');
+    });
+
+    // Модалка
+    document.querySelectorAll("[data-btn]").forEach(item => {
+
+        item.addEventListener('click', function(e){
+
+            e.preventDefault();
+
+            document.body.style.overflow = "hidden";
+
+            let dataValue = this.getAttribute("data-btn");
+
+            let modal = document.querySelector('.' + dataValue)
+
+            document.querySelectorAll('.modal').forEach(function(oldModal){
+        
+                oldModal.style.display = "none";
+                
+            });
+
+            modal.style.display = 'flex';
+
+        });
+
+    });
+
+    document.querySelectorAll('.modal').forEach(function(item){
+        
+        item.addEventListener('click', function(e){
+
+            if(e.target === this || e.target.classList.contains('close')){
+
+                document.body.style.overflow = "visible";
+                this.style.display = "none";
+
+            }
+
+        });
+        
+    });
+
+    document.querySelectorAll('.attention_modal .btn').forEach(function(item){
+
+        item.addEventListener('click', function(){
+
+            document.body.style.overflow = "visible";
+            this.closest('.attention_modal').style.display = "none";
+
+        });
+
+    });
+
+    // меню при ресайзе
+    let mobile = false;
+    let auth = $('.auth');
+
+    if ($(window).width() < 993) {
+
+        mobile = true;
+        $('header .menu').append(auth);
+    } else {
+
+        $('.header .container').append(auth);
+    }
+
+    $(window).on('resize', function () {
+        if ($(window).width() < 993 && !mobile) {
+            mobile = true;
+            $('header .menu').append(auth);
+        }
+
+        if ($(window).width() >= 992 && mobile) {
+            mobile = false;
+            $('header .container').append(auth);
+            $(this, 'header .menu').removeClass('active');
+        }
+    });
+
+
+});
