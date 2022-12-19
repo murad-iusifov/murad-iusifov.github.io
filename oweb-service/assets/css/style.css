@@ -176,8 +176,11 @@ p {
 }
 
 .service_wrap {
+    max-width: 606px;
     background: #FFFFFF;
     box-shadow: 0px 4px 41px rgba(137, 137, 137, 0.2);
+    padding: 30px 33px;
+    margin: 0 auto 50px;
 }
 
 .btn_wrapper {
@@ -319,6 +322,7 @@ textarea {
 
 .label.row.fake_file {
     column-gap: 60px;
+    margin-bottom: 0;
 }
 
 .select {
@@ -381,6 +385,7 @@ textarea {
     border-radius: 0 0 10px 10px;
     margin-top: 2px;
     overflow: hidden;
+    z-index: 1;
 }
 
 .select .list > div {
@@ -779,8 +784,8 @@ footer .networks {
 }
 
 .clasterization .service_wrap {
+    max-width: 100%;
     padding: 30px 40px;
-    margin-bottom: 50px;
 }
 
 .clasterization form {
@@ -807,7 +812,7 @@ footer .networks {
     margin-top: 15px;
 }
 
-.clasterization form .or {
+form .or {
     font-size: 16px;
     color: var(--text-color);
     text-align: center;
@@ -889,12 +894,7 @@ footer .networks {
     margin-bottom: 31px;
 }
 
-.clasterization .table_wrapper {
-    margin-top: 70px;
-}
-
-.clasterization .table_wrapper .title {
-    font-size: 16px;
+.table_wrapper .title {
     margin-bottom: 15px;
 }
 
@@ -907,12 +907,6 @@ footer .networks {
 
 .results_table thead {
     background-color: #fff;
-    color: #fff;
-    font-size: 0px;
-}
-
-.results_table th {
-    padding: 16px 0 17px;
 }
 
 .results_table  th,
@@ -928,19 +922,25 @@ background-color: rgba(68, 106, 239, 0.2);
 background-color: rgba(68, 198, 239, 0.2);
 }
 
-.results_table td {
+.results_table td,
+.results_table th {
     text-align: center;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.27;
     color: var(--title-color);
     border-top: 1px solid var(--text-color);
     border-right: 1px solid var(--text-color);
-    padding: 5px 10px 6px 42px;
+    padding: 5px 10px 6px 20px;
+}
+
+.results_table th {
+    border-top: none;
 }
 
 .results_table th:first-child,
 .results_table td:first-child {
-    width: 216px;
+    width: 146px;
     text-align: left;
 }
 
@@ -952,6 +952,106 @@ background-color: rgba(68, 198, 239, 0.2);
 .results_table td:last-child {
     border-right: none;
 }
+
+.suitable_text form .btn_wrapper,
+.promt_collecting form .btn_wrapper,
+.check_lem form .btn_wrapper,
+.relevant_pages form .btn_wrapper {
+    margin-top: 40px;
+}
+
+.suitable_text .btn,
+.promt_collecting .btn,
+.check_lem form .btn,
+.relevant_pages form .btn {
+    width: 100%;
+}
+
+a[download] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+
+a[download] img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.checks_wrapper .form_title {
+    width: 100%;
+    font-size: 16px;
+    color: var(--title-color);
+    margin-bottom: 10px;
+}
+
+.checks_wrapper.with_title {
+    justify-content: flex-start;
+}
+
+.checks_wrapper.with_title .label {
+    min-width: 0;
+}
+
+.check_lem .table_wrapper {
+    margin-top: 40px;
+}
+
+.suitable_text .service_wrap {
+    max-width: 100%;
+}
+
+.suitable_text .or,
+.suitable_text label.label {
+    max-width: 538px;
+    margin-bottom: 24px;
+}
+
+.suitable_text textarea.big {
+    height: 336px;
+    margin-bottom: 50px;
+}
+
+.suitable_text .checks_wrapper .label {
+    border-left: 3px solid var(--bg-color);
+    padding-left: 7px;
+}
+
+.suitable_text .checks_wrapper .label:nth-child(odd) {
+    border-left: 3px solid #44C6EF;
+}
+
+.suitable_text .table_wrapper {
+    margin-top: 70px;
+}
+
+.suitable_text .results_table th:first-child,
+.suitable_text  .results_table td:first-child {
+    width: 216px;
+}
+
+.suitable_text .results_table th {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1171,7 +1271,7 @@ background-color: rgba(68, 198, 239, 0.2);
 
     footer .links {
         justify-content: center;
-    } 
+    }
 
 }
 
@@ -1194,6 +1294,16 @@ background-color: rgba(68, 198, 239, 0.2);
         flex-direction: column;
     }
 
+    .table_wrapper .results_table th:first-child,
+    .table_wrapper .results_table td:first-child {
+        width: 146px;
+    }
+
+    .table_wrapper .results_table td,
+    .table_wrapper .results_table th {
+        padding: 5px 6px 6px;
+    }
+
 }
 
 @media (max-width: 420px) {
@@ -1202,6 +1312,16 @@ background-color: rgba(68, 198, 239, 0.2);
         width: 150px;
         height: 40px;
         margin: auto 0;
+    }
+
+    .service_wrap {
+        padding: 30px 10px;
+    }
+
+    .table_wrapper .results_table th:first-child,
+    .table_wrapper .results_table td:first-child {
+        width: 130px;
+        font-size: 14px;
     }
 
 }

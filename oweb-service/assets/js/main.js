@@ -40,7 +40,7 @@ $(function () {
     // select
     $('.select .visual_part').on('click', function () {
         $(this).toggleClass('active');
-        $('.select .list').slideToggle();
+        $(this).closest('.select').find('.list').slideToggle();
     });
 
     $('.select .list a').on('click', function (e) {
@@ -48,6 +48,7 @@ $(function () {
         a = $(this).text();
         $(this).closest('.select').find('.visual_part span').text(a)
         $(this).parents('.list').slideToggle();
+        $(this).closest('.select').find('.visual_part').toggleClass('active');
     });
 
     //attention close
