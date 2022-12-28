@@ -114,6 +114,17 @@ $(function () {
 
     });
 
+    // accordion
+    document.querySelectorAll('.accordion_top').forEach(function(accordionTop){
+
+        accordionTop.addEventListener('click', function(){
+
+            this.closest('.accordion').classList.toggle('open');
+
+        });
+
+    });
+
     // меню при ресайзе
     let mobile = false;
     let auth = $('.auth');
