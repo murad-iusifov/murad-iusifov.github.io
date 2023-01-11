@@ -37,6 +37,12 @@ $(function () {
         ]
     });
 
+    // with-project.html
+    $('.with_project_card .top button').on('click', function(){
+            $(this).closest('.top').toggleClass('active');
+            $(this).closest('.with_project_card').find('.content').slideToggle();
+    });
+
     // select
     $('.select .visual_part').on('click', function () {
         $(this).toggleClass('active');

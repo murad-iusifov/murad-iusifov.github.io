@@ -169,6 +169,7 @@ p {
 
 .title {
     font-family: 'FuturaTp-medium';
+    font-weight: 500;
     text-align: center;
     font-size: 18px;
     line-height: 1.4;
@@ -209,7 +210,9 @@ p {
     background-color: #0BAF25;
 }
 
-.btn3 {
+.btn3,
+.btn4,
+.btn5 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,11 +220,19 @@ p {
     font-size: 18px;
     line-height: 1.27;
     color: #fff;
-    background: var(--bg-color);
+    background-color: var(--bg-color);
     border: none;
     border-radius: 9px;
     padding: 9px 18px;
     cursor: pointer;
+}
+
+.btn4 {
+    background-color: var(--btn-color);
+}
+
+.btn5 {
+    background-color: #F3AB55;
 }
 
 .label {
@@ -784,7 +795,8 @@ footer .networks {
     margin-bottom: 160px;
 }
 
-.clasterization .service_wrap {
+.clasterization .service_wrap,
+.with_project .service_wrap {
     max-width: 100%;
     padding: 30px 40px;
 }
@@ -1040,7 +1052,7 @@ a[download] img {
     color: #fff;
 }
 
-.project_simple .steps_nav ul {
+.steps_nav ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1048,7 +1060,7 @@ a[download] img {
     row-gap: 10px;
 }
 
-.project_simple .steps_nav li a {
+.steps_nav li a {
     display: flex;
     align-items: center;
     column-gap: 17px;
@@ -1056,7 +1068,7 @@ a[download] img {
     color: var(--title-color);
 }
 
-.project_simple .steps_nav .circle {
+.steps_nav .circle {
     position: relative;
     width: 34px;
     height: 34px;
@@ -1064,7 +1076,7 @@ a[download] img {
     background-color: rgba(68, 198, 239, 0.2);
 }
 
-.project_simple .steps_nav .circle::before {
+.steps_nav .circle::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -1076,7 +1088,7 @@ a[download] img {
     transform-origin: left;
 }
 
-.project_simple .steps_nav .circle::after {
+.steps_nav .circle::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -1088,11 +1100,11 @@ a[download] img {
     transform-origin: left;
 }
 
-.project_simple .steps_nav .forward a {
+.steps_nav .forward a {
     flex-direction: row-reverse;
 }
 
-.project_simple .steps_nav .forward .circle {
+.steps_nav .forward .circle {
     transform: rotate(180deg);
 }
 
@@ -1343,6 +1355,18 @@ a[download] img {
     color: var(--text-color);
 }
 
+.status_table .error .part:nth-child(1) {
+    max-width: 170px;
+}
+
+.status_table .error .part:nth-child(2) {
+    max-width: 315px;
+}
+
+.status_table .error .part:nth-child(3) {
+    max-width: 110px;
+}
+
 .status_table .error .figure {
     min-width: 22px;
     width: 22px;
@@ -1387,6 +1411,7 @@ a[download] img {
 .status_table .error_url a {
     color: var(--bg-color);
     text-decoration: underline;
+    word-break: break-all;
 }
 
 .project_page .top_panel {
@@ -1572,11 +1597,54 @@ a[download] img {
     color: var(--text-color);
 }
 
+.with_project .title {
+    text-align-last: left;
+    margin-top: 40px;
+}
 
+.with_project .service_wrap .with_project_card + .with_project_card {
+    margin-top: 55px;
+}
 
+.with_project_card .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 50px;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
 
+.with_project_card .top .btn3 {
+    display: none;
+}
 
+.with_project_card .top.active .btn3 {
+    display: inline-block;
+}
 
+.with_project_card .top.active .btn4 {
+    display: none;
+}
+
+.with_project_card .link {
+    font-size: 20px;
+}
+
+.with_project_card .content {
+    display: none;
+}
+
+.with_project_card .text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.with_project_card button {
+    max-width: 243px;
+    width: 100%;
+}
 
 
 
@@ -1782,6 +1850,12 @@ a[download] img {
 
 @media (max-width: 768px) {
 
+    .status_table .error .part:nth-child(1),
+    .status_table .error .part:nth-child(2),
+    .status_table .error .part:nth-child(3) {
+        max-width: unset;
+    }
+
     .project_page .cards {
         column-gap: 20px;
         row-gap: 20px;
@@ -1859,6 +1933,15 @@ a[download] img {
 }
 
 @media (max-width: 600px) {
+
+    .with_project_card .top {
+        flex-direction: column;
+    }
+
+    .with_project_card .text {
+        align-items: center;
+        text-align: center;
+    }
 
     .project_card {
         width: 100%;
